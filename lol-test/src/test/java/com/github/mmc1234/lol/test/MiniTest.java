@@ -21,6 +21,7 @@ public class MiniTest {
     }
     @After
     public void shutDown() {
+        glfwDestroyWindow(windowHandler.getWindow());
         glfwTerminate();
     }
     WindowHandler windowHandler = new WindowHandler();

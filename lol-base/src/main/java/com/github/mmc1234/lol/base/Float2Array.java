@@ -17,11 +17,19 @@ public class Float2Array {
         return size;
     }
 
+    public MemorySegment getSegment() {
+        return segment;
+    }
+
     public void x(int idx, float v) {
         MemoryAccess.setFloatAtIndex(segment, idx*2, v);
     }
     public void y(int idx, float v) {
         MemoryAccess.setFloatAtIndex(segment, idx*2+1, v);
+    }
+    public void set(int idx, float x, float y) {
+        x(idx, x);
+        y(idx, y);
     }
     private Float2Array(MemorySegment segment) {
         Preconditions.checkNotNull(segment);

@@ -15,6 +15,11 @@ public class IntArray {
     public void x(int idx, float v) {
         MemoryAccess.setFloatAtIndex(segment, idx, v);
     }
+
+    public MemorySegment getSegment() {
+        return segment;
+    }
+
     private IntArray(MemorySegment segment) {
         Preconditions.checkNotNull(segment);
         this.segment = segment;

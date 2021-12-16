@@ -31,6 +31,17 @@ public class Float4Array {
         MemoryAccess.setFloatAtIndex(segment, idx*4+3, v);
     }
 
+    public MemorySegment getSegment() {
+        return segment;
+    }
+
+    public void set(int idx, float x, float y, float z, float w) {
+        x(idx, x);
+        y(idx, y);
+        z(idx, z);
+        w(idx, w);
+    }
+
     public int length() {
         return size;
     }
