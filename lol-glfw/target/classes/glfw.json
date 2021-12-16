@@ -1,0 +1,180 @@
+{
+  "package": "com.github.mmc1234.lol.glfw",
+  "proxyClass": "com.github.mmc1234.lol.glfw.GLFW",
+  "proxyInstanceName": "INSTANCE",
+  "enums": [
+    {
+      "name": "InitHint",
+      "elements": ["JOYSTICK_HAT_BUTTONS","COCOA_CHDIR_RESOURCES","COCOA_MENUBAR"]
+    },{
+      "name": "ContextClient",
+      "elements": ["GL","GL_ES","NO"]
+    },{
+      "name": "ContextCreation",
+      "elements": ["NATIVE","EGL","OS_MESA"]
+    },{
+      "name": "Robustness",
+      "elements": ["LOSE_CONTEXT_ON_RESET","NO_RESET_NOTIFICATION","NO"]
+    },{
+      "name": "Profile",
+      "elements": ["CORE","COMPAT","ANY"]
+    },{
+      "name": "ReleaseBehavior",
+      "elements": ["ANY","FLUSH","NONE"]
+    }
+  ],
+
+  "typedPointers": [
+    "Window"
+  ],
+
+  "structs": [
+    {
+      "name":"Image",
+      "layout": [
+        "int",
+        "int",
+        "long"
+      ]
+    }
+  ],
+
+  "callbacks": [
+    {
+      "name": "ErrorFun",
+      "description": "void error(int errorCode, String description)"
+    },
+    {
+      "name": "WinPosFun",
+      "description": "void pos(Window win, int x, int y)"
+    },{
+      "name": "WinSizeFun",
+      "description": "void size(Window win, int w, int h)"
+    },{
+      "name": "WinCloseFun",
+      "description": "void close(Window win)"
+    },{
+      "name": "WinCloseFun",
+      "description": "void close(Window win)"
+    },{
+      "name": "WinRefreshFun",
+      "description": "void refresh(Window win)"
+    },{
+      "name": "WinFocusFun",
+      "description": "void focus(Window win, boolean focused)"
+    },{
+      "name": "WinIconifyFun",
+      "description": "void iconify(Window win, boolean iconified)"
+    },{
+      "name": "WinMaximizeFun",
+      "description": "void close(Window win, boolean maximized)"
+    },{
+      "name": "FrameBufferSizeFun",
+      "description": "void frameBufferSize(Window win, int w, int h)"
+    },{
+      "name": "WinContentScaleFun",
+      "description": "void contentScale(Window win,float xScale, yScale)"
+    }
+  ],
+
+  "methods": [
+    "void glfwInit()",
+    "void glfwTerminate()",
+    "String glfwGetVersion()",
+    "void glfwSetErrorCallback(ErrorCallback errorCallback)",
+    "void glfwInitHint(InitHint hint, boolean enable)",
+
+    "void glfwSetFocused(boolean v)",
+    "boolean glfwIsFocused(Window win)",
+
+    "boolean glfwIsIconified(Window win)",
+
+    "void glfwSetResizable(boolean v)",
+    "void glfwSetResizable(Window win,boolean v)",
+    "boolean glfwIsResizable(Window win)",
+
+    "void glfwSetVisible(boolean v)",
+    "void glfwSetVisible(Window win,boolean v)",
+    "boolean glfwIsVisible(Window win)",
+
+    "void glfwSetAutoIconify(boolean v)",
+    "void glfwSetAutoIconify(Window win,boolean v)",
+    "boolean glfwIsAutoIconify(Window win)",
+
+    "void glfwSetFloating(boolean v)",
+    "void glfwSetFloating(Window win,boolean v)",
+    "boolean glfwOsFloating(Window win)",
+
+    "void glfwSetMaximized(boolean v)",
+    "void glfwSetMaximized(Window win,boolean v)",
+    "boolean glfwIsMaximized(Window win)",
+
+    "boolean glfwIsCenterCursor(Window win)",
+
+    "void glfwSetTransparentFrameBuffer(boolean v)",
+    "void glfwSetTransparentFrameBuffer(Window win,boolean v)",
+    "boolean glfwIsTransparentFrameBuffer(Window win)",
+
+    "boolean glfwIsHovered(Window win)",
+
+    "void glfwSetFocusOnShow(boolean v)",
+    "void glfwSetFocusOnShow(Window win,boolean v)",
+    "boolean glfwIsFocusOnShow(Window win)",
+
+    "void glfwSetRedBits(int v)",
+    "void glfwSetGreenBits(int v)",
+    "void glfwSetBlueBits(int v)",
+    "void glfwSetAlphaBits(int v)",
+    "void glfwSetDepthBits(int v)",
+    "void glfwSetStencilBits(int v)",
+
+    "void glfwSetAccumRedBits(int v)",
+    "void glfwSetAccumGreenBits(int v)",
+    "void glfwSetAccumBlueBits(int v)",
+    "void glfwSetAccumAlphaBits(int v)",
+
+    "void glfwSetAuxBuffers(boolean v)",
+    "void glfwSetStereo(boolean v)",
+    "void glfwSetSamples(boolean v)",
+    "void glfwSetSRGBCapable(boolean v)",
+    "void glfwSetDoubleBuffer(boolean v)",
+    "void glfwSetRefreshRate(int v)",
+
+    "void glfwSetClient(Client v)",
+    "Client glfwGetClient()",
+
+    "void glfwSetContextMajorVersion(int v)",
+    "void glfwSetContextMinorVersion(int v)",
+
+    "int glfwGetContextMajorVersion()",
+    "int glfwGetContextMinorVersion()",
+    "int glfwGetContextRevision()",
+
+    "void glfwSetContextRobustness(Robustness v)",
+    "Robustness glfwGetContextRobustness()",
+
+    "void glfwSetOpenGLForwardCompat(boolean v)",
+    "boolean glfwIsOpenGLForwardCompat()",
+
+    "void glfwSetOpenGLDebugContext(boolean v)",
+    "boolean glfwIsOpenGLDebugContext()",
+
+    "void glfwSetContextProfile(Profile v)",
+    "Profile glfwGetContextProfile()",
+
+    "void glfwSetContextReleaseBehavior(ReleaseBehavior v)",
+    "ReleaseBehavior glfwGetContextReleaseBehavior()",
+
+    "void glfwSetContextNoError(boolean v)",
+    "boolean glfwIsContextNoError()",
+
+    "void glfwSetContextCreation(Creation v)",
+    "Creation glfwGetContextCreation()",
+
+    "void glfwDefaultWindowHints()",
+    "Window glfwCreateWindow(int w,int h, String title,Monitor monitor,Window window)",
+    "void glfwPollEvents()",
+    "void glfwWaitEvents()",
+    "void glfwWaitEventsTimeout(double timeout)",
+  ]
+}

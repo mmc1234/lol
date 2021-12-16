@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lol-render" />
+        <module name="lol-test" />
+        <module name="lol-glfw-impl" />
+        <module name="lol-glfw" />
+        <module name="lol-base" />
+        <module name="lol-cmd" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lol-core" target="17" />
+      <module name="lol-core (1) (com.github.mmc1234)" target="17" />
+      <module name="lol-core (2)" target="17" />
+      <module name="lol-draw" target="17" />
+      <module name="lol-draw-api" target="17" />
+      <module name="lol-draw-api (2)" target="17" />
+      <module name="lol-draw-gui" target="17" />
+      <module name="lol-event-api" target="17" />
+      <module name="lol-exp" target="17" />
+      <module name="lol-exp (2)" target="17" />
+      <module name="lol-font" target="17" />
+      <module name="lol-font-api" target="17" />
+      <module name="lol-font-api (2)" target="17" />
+      <module name="lol-font-core" target="17" />
+      <module name="lol-font-impl" target="17" />
+      <module name="lol-frame" target="17" />
+      <module name="lol-glfw-api" target="17" />
+      <module name="lol-glu" target="17" />
+      <module name="lol-graph-api" target="17" />
+      <module name="lol-gui" target="17" />
+      <module name="lol-gui-core" target="17" />
+      <module name="lol-gui-core (2)" target="17" />
+      <module name="lol-imgui" target="17" />
+      <module name="lol-input-api" target="17" />
+      <module name="lol-jextract" target="17" />
+      <module name="lol-lwjgl" target="17" />
+      <module name="lol-lwjgl (1)" target="17" />
+      <module name="lol-lwjgl (1) (com.github.mmc1234)" target="17" />
+      <module name="lol-lwjgl (2)" target="17" />
+      <module name="lol-lwjgl-backends" target="17" />
+      <module name="lol-my-game" target="17" />
+      <module name="lol-platform" target="17" />
+      <module name="lol-platform-api" target="17" />
+      <module name="lol-platform-impl" target="17" />
+      <module name="lol-render-core" target="17" />
+      <module name="lol-rmgui" target="17" />
+      <module name="lol-sdl2" target="17" />
+      <module name="lol-sound-api" target="17" />
+      <module name="lol-sound-impl" target="17" />
+      <module name="lol-test (1)" target="17" />
+      <module name="lol-test (1) (com.github.mmc1234)" target="17" />
+      <module name="lol-test (2)" target="17" />
+      <module name="lol-text" target="17" />
+      <module name="lol-text-draw" target="17" />
+      <module name="lol-texture" target="17" />
+      <module name="lol-theme-api" target="17" />
+      <module name="lol-util" target="17" />
+      <module name="lol-view-api" target="17" />
+      <module name="lol-view-api (1) (com.github.mmc1234)" target="17" />
+      <module name="lol-view-api (2)" target="17" />
+      <module name="lol-widget" target="17" />
+      <module name="lol-widget-api" target="17" />
+      <module name="lol-window" target="17" />
+      <module name="lol-window-api" target="17" />
+      <module name="lol-window-basic" target="17" />
+      <module name="lol-window-impl" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lol-jextract" options="--add-exports jdk.internal.opt/jdk.internal.joptsimple=lol.jextract" />
+    </option>
+  </component>
+</project>

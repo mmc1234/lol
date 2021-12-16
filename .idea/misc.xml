@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ASMIdeaPluginConfiguration">
+    <asm skipDebug="false" skipFrames="false" skipCode="false" expandFrames="false" />
+    <groovy codeStyle="LEGACY" />
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-glfw/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-glfw-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-render/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/lol-draw-3d/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-draw-core/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-draw-factory/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-draw-gui/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-draw/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-event-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-event/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-exp/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-font-core/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-font-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-font/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-frame/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-glfw-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-glu/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-gui/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-imgui/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-input-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-jextract/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-lwjgl-backends/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-my-game/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-native-library/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-platform-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-platform-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-platform/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-render-core/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-resource-face/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-rmgui/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-sdl2/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-sound-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-sound-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-tcc/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-text-draw/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-texture/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-theme-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-util/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-widget-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-widget/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-win/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-window-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-window-basic/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-window-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-window/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

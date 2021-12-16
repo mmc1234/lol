@@ -1,0 +1,31 @@
+package com.github.mmc1234.lol.render;
+
+public enum TextureFormat {
+    NONE,
+    // Unsigned Norm
+    R8_UNORM, R8G8_UNORM, R8G8B8_UNORM, R8G8B8A8_UNORM,
+    // Signed Norm
+    R8_SNORM, R8G8_SNORM, R8G8B8_SNORM, R8G8B8A8_SNORM,
+    // Unsigned Int
+    R8_UINT, R8G8_UINT, R8G8B8_UINT, R8G8B8A8_UINT,
+    // Signed Int
+    R8_SINT, R8G8_SINT, R8G8B8_SINT, R8G8B8A8_SINT,
+
+    // Unsigned Norm
+    R16_UNORM, R16G16_UNORM, R16G16B16_UNORM, R16B16B16A16_UNORM,
+    // Signed Norm
+    R16_SNORM, R16G16_SNORM, R16G16B16_SNORM, R16B16B16A16_SNORM,
+    // Unsigned Int
+    R16_UINT, R16G16_UINT, R16G16B16_UINT, R16B16B16A16_UINT,
+    // Signed Int
+    R16_SINT, R16G16_SINT, R16G16B16_SINT, R16B16B16A16_SINT,
+
+    // Unsigned Int
+    R32_UINT, R32G32_UINT, R32G32B32_UINT, R32B32B32A32_UINT,
+    // Signed Int
+    R32_SINT, R32G32_SINT, R32G32B32_SINT, R32B32B32A32_SINT,
+
+    // Float16 and Float32
+
+    // sRGB and sRGBA
+}
