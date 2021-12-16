@@ -8,17 +8,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec832ae-2449-43fc-a415-f42311e9b20d" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Int4Array.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/Mesh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/TextureTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/TrianglesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/TextureMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/TrianglesMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/WindowMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/core/AbstractApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/core/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/core/AbstractApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/core/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/Render.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/RenderCall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/ShaderProgram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/TypeFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/Vao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/VboGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/VboInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/VertexAttribDescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/window/WindowHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float2Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float2Array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float4Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float4Array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/IntArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/IntArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-glfw/target/classes/context.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-glfw/target/classes/glfw.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/MiniTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/MiniTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/Bounds.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/Camera.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/Mesh.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/Render.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/render/Render.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/RenderCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/render/RenderCall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TextureDimension.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TextureFilterMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TextureFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TextureWarpMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TypeFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/VertexAttrib.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/VertexAttrib.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/VertexAttribDescription.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-test/pom.xml.versionsBackup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/CmdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-cmd/src/main/java/com/github/mmc1234/lol/cmd/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/MiniTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/TextureTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/TrianglesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/WindowHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/window/WindowHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p2/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +126,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lol-render/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -102,11 +135,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\User\lol\lol-p2\src\main\java\com\github\mmc1234\lol\p1\render" />
+      <recent name="E:\User\lol" />
+      <recent name="E:\User\lol\lol-p1\src\main\java\com\github\mmc1234\lol\p1\render" />
       <recent name="E:\User\lol\lol-test" />
       <recent name="E:\User\lol\lol-sdl2\src\main\resources" />
-      <recent name="E:\User\lol\lol-sdl2" />
-      <recent name="E:\User\lol\lol-jextract\src\main\java" />
-      <recent name="E:\User\lol\lol-platform-api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\User\lol\lol-platform-api\src\main\java" />
@@ -133,98 +166,86 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.mmc1234.lol.p1" />
       <recent name="com.github.mmc1234.lol.base" />
       <recent name="com.github.mmc1234.lol.test" />
       <recent name="com.github.mmc1234.lol.rmgui.inc.one" />
       <recent name="com.github.mmc1234.lol.rmgui" />
-      <recent name="com.github.mmc1234.lol.glfw" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TextureTest.test">
-    <configuration name="MiniTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lol-test" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.p1.Main" />
+      <module name="lol-p2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.test.*" />
+          <option name="PATTERN" value="com.github.mmc1234.lol.p1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.github.mmc1234.lol.test" />
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.test.MiniTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MiniTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lol-test" />
+    <configuration name="TextureMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.p1.TextureMain" />
+      <module name="lol-p1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.test.*" />
+          <option name="PATTERN" value="com.github.mmc1234.lol.p1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.github.mmc1234.lol.test" />
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.test.MiniTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextureTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lol-test" />
+    <configuration name="TextureTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.p1.TextureTest" />
+      <module name="lol-p1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.test.*" />
+          <option name="PATTERN" value="com.github.mmc1234.lol.p1.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.github.mmc1234.lol.test" />
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.test.TextureTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextureTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lol-test" />
+    <configuration name="TrianglesMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.p1.TrianglesMain" />
+      <module name="lol-p1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.test.*" />
+          <option name="PATTERN" value="com.github.mmc1234.lol.p1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.github.mmc1234.lol.test" />
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.test.TextureTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrianglesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lol-test" />
+    <configuration name="WindowMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.p1.WindowMain" />
+      <module name="lol-p1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.test.*" />
+          <option name="PATTERN" value="com.github.mmc1234.lol.p1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.github.mmc1234.lol.test" />
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.test.TrianglesTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TextureTest.test" />
-        <item itemvalue="JUnit.TrianglesTest" />
-        <item itemvalue="JUnit.TextureTest" />
-        <item itemvalue="JUnit.MiniTest" />
-        <item itemvalue="JUnit.MiniTest.test" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TextureMain" />
+        <item itemvalue="Application.TrianglesMain" />
+        <item itemvalue="Application.WindowMain" />
+        <item itemvalue="Application.TextureTest" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639615389040</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="...">
+      <created>1639632649959</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639632649959</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

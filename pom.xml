@@ -9,11 +9,11 @@
     <version>1.0.0-alpha</version>
     <modules>
         <module>lol-base</module>
-        <module>lol-test</module>
         <module>lol-glfw</module>
         <module>lol-glfw-impl</module>
-        <module>lol-render</module>
         <module>lol-cmd</module>
+        <module>lol-p1</module>
+        <module>lol-p2</module>
     </modules>
     <packaging>pom</packaging>
 
