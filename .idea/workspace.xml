@@ -8,49 +8,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec832ae-2449-43fc-a415-f42311e9b20d" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/TextureMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/TrianglesMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/WindowMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/core/AbstractApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/core/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p1/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/core/AbstractApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/core/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/Render.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/RenderCall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/ShaderProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/TypeFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/Vao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/VboGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/VboInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/VertexAttribDescription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/window/WindowHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/AbstractTexture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/StaticTexture2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/TextureDimension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/TextureFilterMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/TextureFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/TextureWarpMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/core/AbstractApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/core/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/AbstractTexture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/Render.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/RenderCall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/ShaderProgram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/StaticTexture2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/TextureDimension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/TextureFilterMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/TextureFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/TextureWarpMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/TypeFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/Vao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/VboGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/VboInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/VertexAttrib.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/render/VertexAttribDescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/com/github/mmc1234/lol/p1/window/WindowHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-p3/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/Bounds.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/Camera.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/Mesh.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/Render.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/render/Render.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/RenderCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/render/RenderCall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TextureDimension.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TextureFilterMode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TextureFormat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TextureWarpMode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/TypeFormat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/VertexAttrib.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render/VertexAttrib.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/com/github/mmc1234/lol/render/VertexAttribDescription.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-test/pom.xml.versionsBackup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/CmdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-cmd/src/main/java/com/github/mmc1234/lol/cmd/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/MiniTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/TextureTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/TrianglesTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/com/github/mmc1234/lol/test/WindowHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p1/src/main/java/com/github/mmc1234/lol/p1/window/WindowHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-test/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p2/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +112,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lol-p2/src/main/java/com/github/mmc1234/lol/p1/render" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -135,8 +121,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\User\lol\lol-p2\src\main\java\com\github\mmc1234\lol\p1\render" />
       <recent name="E:\User\lol" />
+      <recent name="E:\User\lol\lol-p2\src\main\java\com\github\mmc1234\lol\p1\render" />
       <recent name="E:\User\lol\lol-p1\src\main\java\com\github\mmc1234\lol\p1\render" />
       <recent name="E:\User\lol\lol-test" />
       <recent name="E:\User\lol\lol-sdl2\src\main\resources" />
@@ -275,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639632649959</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="...">
+      <created>1639653396397</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639653396397</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

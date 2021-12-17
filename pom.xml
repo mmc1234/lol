@@ -14,6 +14,7 @@
         <module>lol-cmd</module>
         <module>lol-p1</module>
         <module>lol-p2</module>
+        <module>lol-p3</module>
     </modules>
     <packaging>pom</packaging>
 
