@@ -7,18 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="lol-render-branch-v1" />
         <module name="lol-glfw-impl" />
         <module name="lol-glfw" />
         <module name="lol-base" />
         <module name="lol-cmd" />
-        <module name="lol-p1" />
         <module name="lol-p2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="lol-app-v1" target="17" />
       <module name="lol-core" target="17" />
       <module name="lol-core (1) (com.github.mmc1234)" target="17" />
       <module name="lol-core (2)" target="17" />
+      <module name="lol-demo" target="17" />
       <module name="lol-draw" target="17" />
       <module name="lol-draw-api" target="17" />
       <module name="lol-draw-api (2)" target="17" />
@@ -47,6 +49,9 @@
       <module name="lol-lwjgl (2)" target="17" />
       <module name="lol-lwjgl-backends" target="17" />
       <module name="lol-my-game" target="17" />
+      <module name="lol-p1" target="17" />
+      <module name="lol-p2" target="17" />
+      <module name="lol-p3" target="17" />
       <module name="lol-platform" target="17" />
       <module name="lol-platform-api" target="17" />
       <module name="lol-platform-impl" target="17" />

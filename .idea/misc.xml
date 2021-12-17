@@ -11,11 +11,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/lol-glfw/pom.xml" />
         <option value="$PROJECT_DIR$/lol-glfw-impl/pom.xml" />
-        <option value="$PROJECT_DIR$/lol-p2/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/lol-app-v1/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-demo/pom.xml" />
         <option value="$PROJECT_DIR$/lol-draw-3d/pom.xml" />
         <option value="$PROJECT_DIR$/lol-draw-core/pom.xml" />
         <option value="$PROJECT_DIR$/lol-draw-factory/pom.xml" />
@@ -37,10 +38,13 @@
         <option value="$PROJECT_DIR$/lol-lwjgl-backends/pom.xml" />
         <option value="$PROJECT_DIR$/lol-my-game/pom.xml" />
         <option value="$PROJECT_DIR$/lol-native-library/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-p1/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-p3/pom.xml" />
         <option value="$PROJECT_DIR$/lol-platform-api/pom.xml" />
         <option value="$PROJECT_DIR$/lol-platform-impl/pom.xml" />
         <option value="$PROJECT_DIR$/lol-platform/pom.xml" />
         <option value="$PROJECT_DIR$/lol-render-core/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-render/pom.xml" />
         <option value="$PROJECT_DIR$/lol-resource-face/pom.xml" />
         <option value="$PROJECT_DIR$/lol-rmgui/pom.xml" />
         <option value="$PROJECT_DIR$/lol-sdl2/pom.xml" />

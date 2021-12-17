@@ -4,6 +4,7 @@ import com.google.common.base.Preconditions;
 
 public interface Timer {
     void tryRun();
+    boolean shouldRun();
 
     static Timer newSystem(Runnable task, long time, boolean resetOnRun) {
         return new SystemTimer(task, time, resetOnRun);
@@ -25,6 +26,11 @@ public interface Timer {
             this.task = task;
             this.resetOnRun = resetOnRun;
             Preconditions.checkNotNull(task);
+        }
+
+        @Override
+        public boolean shouldRun() {
+            return (System.currentTimeMillis() - time) >= timeInterval;
         }
 
         @Override

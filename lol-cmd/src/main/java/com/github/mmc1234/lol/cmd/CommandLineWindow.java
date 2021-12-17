@@ -110,7 +110,6 @@ public class CommandLineWindow {
                             argList.add(arg);
                         }
                         psb.setLength(0);
-                        System.out.println(listenerQueue.size());
                         CommandLineWindow.this.send(argList.toArray(new String[argList.size()]));
                     }
                 }
