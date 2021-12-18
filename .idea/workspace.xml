@@ -8,8 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec832ae-2449-43fc-a415-f42311e9b20d" name="Changes" comment="...">
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_5.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,20 +133,7 @@
       <recent name="com.github.mmc1234.lol.p1.render" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo1_4">
-    <configuration name="Demo1_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.Demo1_1" />
-      <module name="lol-render-branch-v1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1_1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Demo1_5">
     <configuration name="Demo1_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.Demo1_2" />
       <module name="lol-render-branch-v1" />
@@ -199,6 +186,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Demo1_5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.Demo1_5" />
+      <module name="lol-render-branch-v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Demo1_7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1.demo.Demo1_7" />
       <module name="lol-render-branch-v1" />
@@ -214,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo1_5" />
         <item itemvalue="Application.Demo1_4" />
         <item itemvalue="Application.Demo1_3" />
         <item itemvalue="Application.Demo1_2" />
         <item itemvalue="Application.Demo1_2" />
-        <item itemvalue="Application.Demo1_1" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639819452556</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="...">
+      <created>1639819919493</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639819919493</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
