@@ -8,28 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec832ae-2449-43fc-a415-f42311e9b20d" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Transform.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/CoordRenderData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/RenderThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/WindowWidget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/resources/skybox.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float3Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float3Array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/AbstractApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/AbstractApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Render.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Render.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/StaticTexture2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/StaticTexture2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/WindowHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/WindowHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639737430509</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="...">
+      <created>1639819452556</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639819452556</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
