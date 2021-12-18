@@ -6,6 +6,14 @@ import jdk.incubator.foreign.*;
 public class Float3Array {
     private MemorySegment segment;
     private int size;
+    public MemorySegment getSegment() {
+        return segment;
+    }
+    public void set(int idx, float x, float y, float z) {
+        x(idx, x);
+        y(idx, y);
+        z(idx, z);
+    }
     public float x(int idx) {
         return MemoryAccess.getFloatAtIndex(segment, idx*3);
     }

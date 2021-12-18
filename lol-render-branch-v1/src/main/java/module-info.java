@@ -8,4 +8,5 @@ module lol.render.branch.v1 {
     requires jdk.incubator.foreign;
     requires org.lwjgl.opengl;
     requires org.joml;
+    requires org.lwjgl.stb;
 }

@@ -2,6 +2,7 @@ package com.github.mmc1234.lol.renderbranch.v1;
 
 import com.github.mmc1234.lol.glfw.*;
 import jdk.incubator.foreign.*;
+import org.joml.*;
 import org.lwjgl.opengl.*;
 
 public class WindowHandler implements CursorPosCallback, CursorEnterCallback, MouseButtonCallback, WindowFocusCallback, FramebufferSizeCallback, WindowSizeCallback {
@@ -12,12 +13,25 @@ public class WindowHandler implements CursorPosCallback, CursorEnterCallback, Mo
     Window window = Window.EMPTY;
     private MemorySegment tmp;
 
+    public final Vector2d previousPos;
+
+    public final Vector2d currentPos;
+
+    public final Vector2f displVec;
+
+    public Vector2f getDisplVec() {
+        return displVec;
+    }
+
     public void destroy() {
         GLFW.glfwDestroyWindow(window);
         window = Window.EMPTY;
     }
 
     public WindowHandler() {
+        previousPos = new Vector2d(-1, -1);
+        currentPos = new Vector2d(0, 0);
+        displVec = new Vector2f();
         tmp = MemorySegment.allocateNative(4 * 4, ResourceScope.globalScope());
     }
 
@@ -119,6 +133,8 @@ public class WindowHandler implements CursorPosCallback, CursorEnterCallback, Mo
     private void setMousePos(double x, double y) {
         this.mouseX = x;
         this.mouseY = y;
+        currentPos.x = x;
+        currentPos.y = y;
     }
 
     @Override

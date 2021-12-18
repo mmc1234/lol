@@ -44,6 +44,7 @@ public class StaticTexture2D extends AbstractTexture {
                 GL33.glTexParameteri(GL33. GL_TEXTURE_2D, GL33.GL_TEXTURE_MAX_LEVEL, mipmapLevel);
             }
             GL33.glTexImage2D(GL11.GL_TEXTURE_2D, 0, internalFmt, getWidth(), getHeight(), 0, fmt, type, pixels.address().toRawLongValue());
+            GL33.glBindTexture(GL33.GL_TEXTURE_2D, 0);
             pixels = null;
         }
     }

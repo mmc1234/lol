@@ -12,73 +12,93 @@ public class Camera {
     private Float4 background = DEFAULT_COLOR;
     private FrameBuffer frameBuffer;
     private int clearMask;
-    private final Vector3f position;
-    private final Vector3f rotation;
+    public final Transform transform;
+
+    private float fov;
+    private float aspectRatio;
+    private float zFar, zNear;
+
+
+    private final Matrix4f projectionMatrix;
+
+    private final Matrix4f modelViewMatrix;
+
+    private final Matrix4f viewMatrix;
+
+    public final Matrix4f getProjectionMatrix() {
+        return projectionMatrix.setPerspective(fov, aspectRatio, zNear, zFar);
+    }
+
+    public Matrix4f getViewMatrix() {
+        Vector3f cameraPos = transform.position;
+        Vector3f rotation = transform.rotation;
+
+        viewMatrix.identity();
+        // First do the rotation so camera rotates over its position
+        viewMatrix.rotate((float)Math.toRadians(rotation.x), new Vector3f(1, 0, 0)) .rotate((float)Math.toRadians(rotation.y), new Vector3f(0, 1, 0));
+        // Then do the translation
+        viewMatrix.translate(-cameraPos.x, -cameraPos.y, -cameraPos.z);
+        return viewMatrix;
+    }
+
+    public Matrix4f getModelViewMatrix(Matrix4f viewMatrix) {
+        modelViewMatrix.identity().translate(new Vector3f(0)).
+                rotateX((float)Math.toRadians(-0)).
+                rotateY((float)Math.toRadians(-0)).
+                rotateZ((float)Math.toRadians(-0)).
+                scale(1);
+        Matrix4f viewCurr = new Matrix4f(viewMatrix);
+        return viewCurr.mul(modelViewMatrix);
+    }
+
 
     public Camera() {
-        position = new Vector3f(0, 0, 0);
-        rotation = new Vector3f(0, 0, 0);
+        transform = new Transform();
+        projectionMatrix = new Matrix4f();
+        modelViewMatrix = new Matrix4f();
+        viewMatrix = new Matrix4f();
+        setZNear(0.01f);
+        setZFar(1000);
+        setFov((float) Math.toRadians(60f));
+        setAspectRatio(1);
     }
 
-    public Camera(Vector3f position, Vector3f rotation) {
-        this.position = position;
-        this.rotation = rotation;
+
+    public void setFov(float fov) {
+        this.fov = fov;
     }
 
-    public Vector3f getPosition() {
-        return position;
+    public void setAspectRatio(float aspectRatio) {
+        this.aspectRatio = aspectRatio;
     }
 
-    public void setPosition(float x, float y, float z) {
-        position.x = x;
-        position.y = y;
-        position.z = z;
+    public void setZFar(float zFar) {
+        this.zFar = zFar;
     }
 
-    public void movePosition(float offsetX, float offsetY, float offsetZ) {
-        if ( offsetZ != 0 ) {
-            position.x += (float)Math.sin(Math.toRadians(rotation.y)) * -1.0f * offsetZ;
-            position.z += (float)Math.cos(Math.toRadians(rotation.y)) * offsetZ;
-        }
-        if ( offsetX != 0) {
-            position.x += (float)Math.sin(Math.toRadians(rotation.y - 90)) * -1.0f * offsetX;
-            position.z += (float)Math.cos(Math.toRadians(rotation.y - 90)) * offsetX;
-        }
-        position.y += offsetY;
+
+    public void setZNear(float zNear) {
+        this.zNear = zNear;
     }
 
-    public Vector3f getRotation() {
-        return rotation;
+    public float getFov() {
+        return fov;
     }
 
-    public void setRotation(float x, float y, float z) {
-        rotation.x = x;
-        rotation.y = y;
-        rotation.z = z;
+    public float getAspectRatio() {
+        return aspectRatio;
     }
 
-    public void moveRotation(float offsetX, float offsetY, float offsetZ) {
-        rotation.x += offsetX;
-        rotation.y += offsetY;
-        rotation.z += offsetZ;
+    public float getZFar() {
+        return zFar;
+    }
+
+    public float getZNear() {
+        return zNear;
     }
 
     public int getClearMask() {
         return clearMask;
-    }
-
-
-    private Matrix4f viewMatrix = new Matrix4f().identity();
-    public Matrix4f getViewMatrix() {
-        Vector3f cameraPos = this.getPosition();
-        Vector3f rotation = this.getRotation();
-        viewMatrix.identity();
-        // 首先进行旋转，使摄像机在其位置上旋转
-        viewMatrix.rotate((float)Math.toRadians(rotation.x), new Vector3f(1, 0, 0))
-                .rotate((float)Math.toRadians(rotation.y), new Vector3f(0, 1, 0));
-        // 然后做位移
-        viewMatrix.translate(-cameraPos.x, -cameraPos.y, -cameraPos.z);
-        return viewMatrix;
     }
 
     public void clear() {

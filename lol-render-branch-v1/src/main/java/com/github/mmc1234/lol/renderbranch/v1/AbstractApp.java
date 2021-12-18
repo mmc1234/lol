@@ -61,9 +61,9 @@ public abstract class AbstractApp implements App {
 
     @Override
     public final void run() {
-        onLogicStart();
         Guice.createInjector(new ImplGLFWModule());
         Preconditions.checkState(GLFW.glfwInit());
+        onLogicStart();
         windowHandler = new WindowHandler();
         startTime = GLFW.glfwGetTime();
         renderThread = new RenderThread();

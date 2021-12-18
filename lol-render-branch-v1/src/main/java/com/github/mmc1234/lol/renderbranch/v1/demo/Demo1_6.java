@@ -1,21 +1,19 @@
 package com.github.mmc1234.lol.renderbranch.v1.demo;
 
-import com.github.mmc1234.lol.base.*;
-
 import com.github.mmc1234.lol.base.Timer;
+import com.github.mmc1234.lol.base.*;
 import com.github.mmc1234.lol.glfw.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
 import jdk.incubator.foreign.*;
 import org.joml.*;
 import org.lwjgl.opengl.*;
 
-import java.lang.*;
 import java.util.Random;
 
-public class Demo1_5 extends AbstractApp {
+public class Demo1_6 extends AbstractApp {
 
     public static void main(String[] args) {
-        new Demo1_5().run();
+        new Demo1_6().run();
     }
     private Camera mainCamera;
     int msLoc, projectionLoc, mvmLoc;
@@ -36,9 +34,9 @@ public class Demo1_5 extends AbstractApp {
     StaticTexture2D blueNoise = new StaticTexture2D(TextureFilterMode.LINEAR, TextureFilterMode.POINT,
             TextureFormat.R8G8B8A8_UINT, TextureFormat.R8G8B8A8_UINT, 256, 256);
 
-    CoordRenderData coordData;
+    CoordRenderData coordRenderData;
 
-    public Demo1_5() {
+    public Demo1_6() {
 
     }
 
@@ -48,7 +46,7 @@ public class Demo1_5 extends AbstractApp {
         mainCamera.setClearMask(GL33.GL_COLOR_BUFFER_BIT);
         mainCamera.setFrameBuffer(FrameBuffer.newDefault());
         vao = new Vao();
-        coordData = new CoordRenderData();
+        coordRenderData = new CoordRenderData();
         vboGroup = VboGroup.newInstance( (vboGroup, idx) -> {
                     switch (idx) {
                         case 0->vboGroup.setData(vertices.getSegment().address(), (int) vertices.getSegment().byteSize());
@@ -93,19 +91,29 @@ public class Demo1_5 extends AbstractApp {
                 }
                                     
                 """);
-        vertices = Float3Array.newFloat3Array(3);
-        colors = Float4Array.newFloat4Array(3);
-        uvs = Float2Array.newFloat2Array(3);
+        vertices = Float3Array.newFloat3Array(6);
+        colors = Float4Array.newFloat4Array(6);
+        uvs = Float2Array.newFloat2Array(6);
         pixels = IntArray.newIntArray(blueNoise.getWidth() * blueNoise.getWidth());
-        vertices.set(0, 0, 1, -1);
+
+        vertices.set(0, -1, 1, -1);
         vertices.set(1, -1, -1, -1);
-        vertices.set(2, 1, -1, -1);
+        vertices.set(2, 1, 1, -1);
+        vertices.set(3, 1, 1, -1);
+        vertices.set(4, -1, -1, -1);
+        vertices.set(5, 1, -1, -1);
         colors.set(0, 1, 1, 1, 1);
         colors.set(1, 1, 1, 1, 1);
         colors.set(2, 1, 1, 1, 1);
-        uvs.set(0, 0.5f, 0);
+        colors.set(3, 1, 1, 1, 1);
+        colors.set(4, 1, 1, 1, 1);
+        colors.set(5, 1, 1, 1, 1);
+        uvs.set(0, 0, 0);
         uvs.set(1, 0, 1);
-        uvs.set(2, 1, 1);
+        uvs.set(2, 1, 0);
+        uvs.set(3, 1, 0);
+        uvs.set(4, 0, 1);
+        uvs.set(5, 1, 1);
         for (int i = 0; i < 256; i++) {
             for (int j = 0; j < 256; j++) {
                 //int r = Math.min(rand.nextInt(0b01111111), rand.nextInt(0b01111111)); // red
@@ -138,7 +146,7 @@ public class Demo1_5 extends AbstractApp {
         vao.init();
         GL33.glBindVertexArray(vao.getVao());
         vboGroup.init();
-        coordData.init();
+        coordRenderData.init();
 
         msLoc = GL33.glGetUniformLocation(program.getProgram(), "mySampler");
         projectionLoc = GL33.glGetUniformLocation(program.getProgram(), "projectionMatrix");
@@ -245,12 +253,12 @@ public class Demo1_5 extends AbstractApp {
         GL33.glUniformMatrix4fv(mvmLoc, false, modelViewMatrix.get(new float[16]));
         GL33.glActiveTexture(GL33.GL_TEXTURE0+0);
         GL33.glBindTexture(GL33.GL_TEXTURE_2D, blueNoise.getNativeTexture());
-        GL33.glDrawArrays(GL11.GL_TRIANGLES, 0, 3);
+        GL33.glDrawArrays(GL11.GL_TRIANGLES, 0, 6);
 
         GL33.glLineWidth(4);
         GL33.glActiveTexture(GL33.GL_TEXTURE0+0);
         GL33.glBindTexture(GL33.GL_TEXTURE_2D, white.getNativeTexture());
-        GL33.glBindVertexArray(coordData.getVao().getVao());
+        GL33.glBindVertexArray(coordRenderData.getVao().getVao());
         GL33.glDrawArrays(GL11.GL_LINES, 0, 6);
 
         GL33.glBindTexture(GL33.GL_TEXTURE_2D, 0);
@@ -261,7 +269,7 @@ public class Demo1_5 extends AbstractApp {
 
     @Override
     public void onRenderStop() {
-        coordData.close();
+        coordRenderData.close();
         vboGroup.close();
         vao.close();
         program.close();

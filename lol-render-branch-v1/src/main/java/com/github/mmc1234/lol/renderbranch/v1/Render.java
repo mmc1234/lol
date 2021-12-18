@@ -8,7 +8,7 @@ import java.util.*;
 public class Render {
     private static volatile boolean isReplayingQueue;
     private static final Queue<RenderCall> recordingQueue = Queues.newConcurrentLinkedQueue();
-    private static Thread renderThread;
+    private static volatile Thread renderThread;
 
     public static void initRenderThread() {
         Preconditions.checkState(renderThread == null, "Could not initialize render thread");
