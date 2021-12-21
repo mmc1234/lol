@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.legacy;
+package com.github.mmc1234.lol.renderbranch.v1.current;
 
 import com.github.mmc1234.lol.renderbranch.v1.*;
-import com.github.mmc1234.lol.renderbranch.v1.current.*;
 import com.google.common.base.*;
 import org.lwjgl.opengl.*;
 
@@ -25,6 +24,10 @@ public class FrameBuffer {
     public static final FrameBuffer DEFAULT = new FrameBuffer(true);
     private int id;
     private boolean isDefaultBuffer;
+
+    public static final FrameBuffer notNull(FrameBuffer frameBuffer) {
+        return frameBuffer == null ? DEFAULT : frameBuffer;
+    }
 
     private FrameBuffer(boolean isDefaultBuffer) {
         this.isDefaultBuffer = isDefaultBuffer;

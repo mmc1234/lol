@@ -18,6 +18,7 @@ package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
 import com.github.mmc1234.lol.base.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
+import com.github.mmc1234.lol.renderbranch.v1.current.*;
 import com.google.common.base.*;
 import org.joml.*;
 import org.lwjgl.opengl.*;

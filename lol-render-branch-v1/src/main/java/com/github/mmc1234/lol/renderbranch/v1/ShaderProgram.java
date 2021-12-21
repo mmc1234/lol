@@ -34,6 +34,7 @@ public final class ShaderProgram {
         }
         uniformMap.put(uniformName, uniformLocation);
     }
+
     public void tryCreateUniform(String uniformName) {
         int uniformLocation = glGetUniformLocation(id, uniformName);
         if (uniformLocation >= 0) {

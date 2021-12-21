@@ -22,7 +22,6 @@ import com.github.mmc1234.lol.glfw.*;
 import com.github.mmc1234.lol.glfw.impl.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
 import com.github.mmc1234.lol.renderbranch.v1.current.*;
-import com.github.mmc1234.lol.renderbranch.v1.current.Camera;
 import com.google.common.base.*;
 import com.google.inject.*;
 import jdk.incubator.foreign.*;
@@ -39,9 +38,16 @@ import java.util.concurrent.atomic.*;
 import static com.github.mmc1234.lol.glfw.GLFW.*;
 
 /**
- * 简单的资源使用演示，渲染了一个FBO的Color附件
+ * 简单的资源使用演示，一个简单的材质
  * */
-public class Demo1_7 {
+public class Demo1_8 {
+    static class MyMaterial implements Material {
+        public float r,g,b,a;
+        @Override
+        public void apply(ShaderProgram program) {
+            GL33.glUniform4f(program.getUniformLocation("rgba"), r,g,b,a);
+        }
+    }
     Window window = Window.ofLong(0);
     final AtomicBoolean shouldExit = new AtomicBoolean();
     final Timer renderTimer = Timer.newSystem(this::recordRender, 1000/60, true);
@@ -56,13 +62,11 @@ public class Demo1_7 {
     Texture2D myTexture;
     Camera cam = new Camera();
     double lastInputTime = -1;
-    FrameBuffer frameBuffer;
-    Texture2D fboColor;
+    MyMaterial material = new MyMaterial();
 
     static final String SHADERS_PATH = "shaders/";
 
     public void init() {
-        frameBuffer = FrameBuffer.newInstance();
         quadMesh = Mesh.create(defaultVertexAttribDescriptionList);
         quadMesh.setData(0, MemorySegmentUtil.createFromFloatArray(-1, 1, -1,  -1, -1, -1,  1, -1, -1,  1, 1, -1));
         quadMesh.setData(1, MemorySegmentUtil.createFromFloatArray(0, 0, 0, 1, 1, 1, 1, 0));
@@ -88,7 +92,7 @@ public class Demo1_7 {
 
         mainProgram = ShaderProgram.newInstance(
                 ResourceUtil.loadModuleText(SHADERS_PATH+ "simple_cam_vertex.glsl"),
-                ResourceUtil.loadModuleText(SHADERS_PATH+ "simple_uv_fragment.glsl"));
+                ResourceUtil.loadModuleText(SHADERS_PATH+ "rgba_uv_fragment.glsl"));
 
         RenderThread.launch();
         Render.recordRenderCall(this::renderStart);
@@ -118,7 +122,8 @@ public class Demo1_7 {
         GL.createCapabilities();
         glfwSetCursorPosCallback(window, (w,x,y)->cursorPos(x,y));
         glfwSetCursorEnterCallback(window, (w, h)->hovered(h));
-
+        GL33.glEnable(GL11.GL_BLEND);
+        GL33.glBlendFunc( GL11.GL_SRC_ALPHA ,GL11.GL_ONE_MINUS_SRC_ALPHA );
         GL33.glEnable(KHRDebug.GL_DEBUG_OUTPUT);
         KHRDebug.glDebugMessageCallback((src, type, id, severity, len, msg, data) -> {
             System.out.printf("[Src=%s, Type=%s, Id=%d, Severity=%s]\n  %s\n",
@@ -130,23 +135,18 @@ public class Demo1_7 {
 
         myTexture = new Texture2D(TextureFormat.R8G8B8A8_UINT, img.w, img.h);
         myTexture.init();
+
         myTexture.reload(img.pixels);
 
-        fboColor = new Texture2D(TextureFormat.R8G8B8A8_UINT, 256, 256);
-        fboColor.init();
-        fboColor.reload();
         Texture2D.bindZero();
-
-        frameBuffer.init();
-        FrameBuffer.attachTexture2D(fboColor);
-        FrameBuffer.chunk();
-        FrameBuffer.bindZero();
 
         mainProgram.init();
         mainProgram.createUniform("texture_sampler");
         mainProgram.createUniform("projection_matrix");
         mainProgram.createUniform("model_view_matrix");
+        mainProgram.createUniform("rgba");
         mainProgram.use();
+
         GL33.glUniform1i(mainProgram.getUniformLocation("texture_sampler"), 0);
 
         quadVertexBuffer.getVao().initAndBind();
@@ -253,7 +253,6 @@ public class Demo1_7 {
             }
             GL33.glClearColor(0.25f,0.25f, 0.25f, 1);
             GL33.glClear(GL33.GL_COLOR_BUFFER_BIT);
-            frameBuffer.bind();
             mainProgram.use();
             cam.updateProjection();
             cam.updateViewMatrix();
@@ -264,19 +263,19 @@ public class Demo1_7 {
                     false, cam.getModelViewMatrix().get(new float[16]));
             quadVertexBuffer.getVao().bind();
             GL33.glActiveTexture(GL33.GL_TEXTURE0);
+            material.r = 1;
+            material.g = 1;
+            material.b = 1;
+            material.a = 0.5f;
+            material.apply(mainProgram);
             myTexture.bind();
             GL33.nglDrawElements(GL33.GL_TRIANGLES, 6, GL33.GL_UNSIGNED_INT, quadMesh.getIndices().address().toRawLongValue());
-
-            FrameBuffer.bindZero();
-            fboColor.bind();
-            GL33.nglDrawElements(GL33.GL_TRIANGLES, 6, GL33.GL_UNSIGNED_INT, quadMesh.getIndices().address().toRawLongValue());
-
             GL33.glLineWidth(3);
             coordVertexBuffer.getVao().bind();
+            material.r = 1;
+            material.apply(mainProgram);
             GL33.nglDrawElements(GL33.GL_LINES, 6, GL33.GL_UNSIGNED_INT, coordMesh.getIndices().address().toRawLongValue());
             GL33.glLineWidth(1);
-
-
             Vao.bindZero();
             Texture2D.bindZero();
             ShaderProgram.useZero();
@@ -314,7 +313,7 @@ public class Demo1_7 {
         }
     }
 
-    public Demo1_7() {
+    public Demo1_8() {
         init();
         loop();
         close();
@@ -341,6 +340,6 @@ public class Demo1_7 {
 
     public static void main(String[] args) {
         Guice.createInjector(new ImplGLFWModule());
-        new Demo1_7();
+        new Demo1_8();
     }
 }

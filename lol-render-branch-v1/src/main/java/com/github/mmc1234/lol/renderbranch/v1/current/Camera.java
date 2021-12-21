@@ -32,7 +32,17 @@ public class Camera {
 
     private final Matrix4f modelViewMatrix = new Matrix4f();
 
+    private FrameBuffer frameBuffer;
+
     float fov, aspect, zNear, zFar;
+
+    public void setFrameBuffer(FrameBuffer frameBuffer) {
+        this.frameBuffer = FrameBuffer.notNull(frameBuffer);
+    }
+
+    public FrameBuffer getFrameBuffer() {
+        return frameBuffer;
+    }
 
     public Matrix4f getProjectionMatrix() {
         return projectionMatrix;
