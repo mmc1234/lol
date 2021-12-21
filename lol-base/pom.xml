@@ -18,6 +18,7 @@
             <version>1.9.24</version>
             <scope>compile</scope>
         </dependency>
+
     </dependencies>
 
     <properties>

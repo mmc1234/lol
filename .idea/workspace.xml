@@ -8,8 +8,130 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec832ae-2449-43fc-a415-f42311e9b20d" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/mmc1234.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/DebugUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/MemorySegmentUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/ResourceUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/AbstractTexture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/Camera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/CharDescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/DebugFont.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/DebugFontImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/Mesh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/Texture2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/Vao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/Vbo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/VertexBuffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_1_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_1_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_4_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/resources/demo_1_1_2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/resources/shaders/simple_3d_fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/resources/shaders/simple_3d_vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/resources/shaders/simple_cam_vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/resources/shaders/simple_uv_fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/resources/shaders/simple_uv_vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/resources/textures/texture.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Double2.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Double2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float2.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float2Array.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float3.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float3Array.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float4.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Float4Array.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/ImmutableFloat2.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/ImmutableFloat2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/ImmutableIntRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/ImmutableIntRectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Int2.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Int2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Int3.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Int3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Int4.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Int4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Int4Array.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/IntArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/IntRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/IntRectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/ObjRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/ObjRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Ref.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Ref.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Sugars.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Sugars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-base/src/main/java/com/github/mmc1234/lol/base/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-cmd/src/main/java/com/github/mmc1234/lol/cmd/CommandLine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-cmd/src/main/java/com/github/mmc1234/lol/cmd/CommandLineWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-cmd/src/main/java/com/github/mmc1234/lol/cmd/CommandLineWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-cmd/src/main/java/com/github/mmc1234/lol/cmd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-cmd/src/main/java/com/github/mmc1234/lol/cmd/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw-impl/src/main/java/com/github/mmc1234/lol/glfw/impl/ImplGLFWBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw-impl/src/main/java/com/github/mmc1234/lol/glfw/impl/ImplGLFWBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw-impl/src/main/java/com/github/mmc1234/lol/glfw/impl/ImplGLFWModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw-impl/src/main/java/com/github/mmc1234/lol/glfw/impl/ImplGLFWModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/CharCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/CharCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/CharModsCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/CharModsCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/Cursor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/CursorEnterCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/CursorEnterCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/CursorPosCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/CursorPosCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/DropCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/DropCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/ErrorCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/ErrorCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/FramebufferSizeCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/FramebufferSizeCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/GLFW.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/GLFW.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/GLFWModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/GLFWModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/GamepadState.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/GamepadState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/GammaRamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/GammaRamp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/JoystickCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/JoystickCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/KeyCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/KeyCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/Monitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/MonitorCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/MonitorCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/MouseButtonCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/MouseButtonCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/ScrollCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/ScrollCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/VideoMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/VideoMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowCloseCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowCloseCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowContentScaleCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowContentScaleCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowFocusCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowFocusCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowIconifyCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowIconifyCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowMaximizeCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowMaximizeCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowPosCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowPosCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowRefreshCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowRefreshCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowSizeCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/WindowSizeCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/backend/GlfwBackend.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-glfw/src/main/java/com/github/mmc1234/lol/glfw/backend/GlfwBackend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/AbstractApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/AbstractTexture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/legacy/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/FrameBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/legacy/FrameBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Render.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Render.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/RenderCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/RenderCall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/ShaderProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/ShaderProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/StaticTexture2D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TextureDimension.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TextureDimension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TextureFilterMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TextureFilterMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TextureFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TextureFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TextureWarpMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TextureWarpMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Transform.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Transform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TypeFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/TypeFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/Vao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/VboGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/VboInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/VertexAttrib.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/VertexAttribDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/VertexAttribDescription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/WindowHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/CoordRenderData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/demo/Demo1_7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/RenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/RenderThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/WindowWidget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1/current/demo/Demo1_3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/com/github/mmc1234/lol/renderbranch/v1_1/demo/Demo1_5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/lol-render-branch-v1/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +144,9 @@
         <option value="AnnotationType" />
         <option value="Record" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="package-info" />
         <option value="module-info" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -71,6 +193,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
+  </component>
   <component name="ProjectId" id="21ITdxTLgbV5uI0hlnrWyu48Ore" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -90,24 +215,26 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="copyright.filetypes.JAVA" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\User\lol\lol-render-branch-v1\src\main\resources" />
-      <recent name="E:\User\lol\lol-p2\src\main\java\com\github\mmc1234\lol\p2\api" />
-      <recent name="E:\User\lol\lol-p1\src\main\java\com\github\mmc1234\lol\p1\api" />
+      <recent name="E:\User\lol\lol-render-branch-v1\src\main\resources\shaders" />
+      <recent name="E:\User\lol\lol-render-branch-v1\src\main\resources\demo1_4_1\textures" />
+      <recent name="E:\User\lol\lol-render-branch-v1\src\main\resources\demo1.textures" />
       <recent name="E:\User\lol" />
-      <recent name="E:\User\lol\lol-p2\src\main\java\com\github\mmc1234\lol\p1\render" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\User\lol\lol-platform-api\src\main\java" />
-      <recent name="E:\User\lol\lol-platform-api\src\main\java\com\github\mmc1234\lol\platform\api" />
-      <recent name="E:\User\lol\lol-graph-api\src\main\java\com.gitub.mmc1234.lol.graph.api" />
-      <recent name="E:\User\lol\lol-window-api\src\main\java\com\github\mmc1234\lol\window\api\input\event" />
-      <recent name="E:\User\lol\lol-glu\src\main\java" />
+      <recent name="E:\User\lol\lol-render-branch-v1\src\main\resources\textures" />
+      <recent name="E:\User\lol\lol-render-branch-v1\src\main\resources" />
+      <recent name="E:\User\lol\lol-render-branch-v1\src\main\resources\demo1_4\shaders" />
+      <recent name="E:\User\lol\lol-render-branch-v1\src\main\resources\demo1_4\textures" />
+      <recent name="E:\User\lol\lol-render-branch-v1\src\main\resources\demo1_4_1\textures" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.github.mmc1234.lol.renderbranch.share.v1.TextureFilterMode" />
+      <recent name="com.github.mmc1234.lol.renderbranch.v1.TypeFormat" />
       <recent name="com.github.mmc1234.lol.window.api.r1.VolatileCode" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -126,59 +253,47 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.mmc1234.lol.renderbranch.v1_1.demo" />
+      <recent name="com.github.mmc1234.lol.renderbranch.v1.current.demo" />
+      <recent name="com.github.mmc1234.lol.renderbranch.v1.current" />
       <recent name="com.github.mmc1234.lol.renderbranch.v1_1" />
+      <recent name="com.github.mmc1234.lol.renderbranch.v1_1.demo" />
       <recent name="com.github.mmc1234.lol.renderbranch.v1" />
-      <recent name="com.github.mmc1234.lol.renderbranch.v1.demo" />
-      <recent name="com.github.mmc1234.lol.p1.render" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo1_5">
-    <configuration name="Demo1_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.Demo1_2" />
-      <module name="lol-render-branch-v1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo1_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.Demo1_2" />
-      <module name="lol-render-branch-v1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo1_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.Demo1_3" />
-      <module name="lol-render-branch-v1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Demo1_7">
     <configuration name="Demo1_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.Demo1_4" />
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.Demo1_4" />
       <module name="lol-render-branch-v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.*" />
+          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo1_4_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.Demo1_4_1" />
+      <module name="lol-render-branch-v1" />
+      <option name="VM_PARAMETERS" value="--enable-native-access=lol.render.branch.v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo1_4_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.Demo1_4_2" />
+      <module name="lol-render-branch-v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -187,11 +302,12 @@
       </method>
     </configuration>
     <configuration name="Demo1_5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.Demo1_5" />
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.Demo1_5" />
       <module name="lol-render-branch-v1" />
+      <option name="VM_PARAMETERS" value="--enable-native-access=lol.render.branch.v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1_1.demo.*" />
+          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -199,12 +315,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo1_7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1.demo.Demo1_7" />
+    <configuration name="Demo1_6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.Demo1_6" />
       <module name="lol-render-branch-v1" />
+      <option name="VM_PARAMETERS" value="--enable-native-access=lol.render.branch.v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1.demo.*" />
+          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo1_7" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.Demo1_7" />
+      <module name="lol-render-branch-v1" />
+      <option name="VM_PARAMETERS" value="--enable-native-access=lol.render.branch.v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.mmc1234.lol.renderbranch.v1.current.demo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -214,11 +345,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo1_6" />
         <item itemvalue="Application.Demo1_5" />
+        <item itemvalue="Application.Demo1_4_1" />
         <item itemvalue="Application.Demo1_4" />
-        <item itemvalue="Application.Demo1_3" />
-        <item itemvalue="Application.Demo1_2" />
-        <item itemvalue="Application.Demo1_2" />
+        <item itemvalue="Application.Demo1_4_2" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639819919493</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="...">
+      <created>1639820434027</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639820434027</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
