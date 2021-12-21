@@ -14,22 +14,8 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current.demo;
+package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
-import org.apache.commons.io.*;
+public record CharDescription(int x, int y, int advanceWidth, char charSize, float u1, float v1, float u2, float v2) {
 
-import java.io.*;
-import java.nio.charset.*;
-import java.util.*;
-
-/**
- * Demo: Load resource
- * */
-public class Demo1_1_2 {
-    public static void main(String[] args) throws IOException {
-        var is = Demo1_1_2.class.getModule().getResourceAsStream("demo_1_1_2.txt");
-        var str = IOUtils.toString(Objects.requireNonNull(is), Charset.defaultCharset());
-
-        System.out.println(str);
-    }
 }

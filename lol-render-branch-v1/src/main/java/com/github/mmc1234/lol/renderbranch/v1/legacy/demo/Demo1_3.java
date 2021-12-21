@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current.demo;
+package com.github.mmc1234.lol.renderbranch.v1.legacy.demo;
 
 import com.github.mmc1234.lol.base.*;
 import com.github.mmc1234.lol.glfw.*;
 import com.github.mmc1234.lol.glfw.impl.*;
-import com.github.mmc1234.lol.renderbranch.v1.current.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
+import com.github.mmc1234.lol.renderbranch.v1.legacy.*;
 import com.google.common.base.*;
 import com.google.inject.*;
 import org.lwjgl.opengl.*;

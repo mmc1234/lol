@@ -22,7 +22,10 @@ import org.apache.commons.io.*;
 import java.io.*;
 import java.nio.charset.*;
 
-public class ResourceUtil {
+public final class ResourceUtil {
+    private ResourceUtil() {
+        throw new IllegalCallerException();
+    }
     public static final InputStream getModuleResourceAsStream(String name) throws IOException {
         return ResourceUtil.class.getModule().getResourceAsStream(name);
     }

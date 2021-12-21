@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current;
+package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
 import com.github.mmc1234.lol.renderbranch.v1.*;
 import com.google.common.base.*;
@@ -28,7 +28,6 @@ public abstract class AbstractTexture {
     protected int id;
     protected TextureDimension dimension;
     protected String name;
-
 
     public void setMinFilter(TextureFilterMode minFilter) {
         this.minFilter = minFilter;
@@ -99,6 +98,7 @@ public abstract class AbstractTexture {
     public abstract void init();
 
     public void bind() {
+        Render.assertRenderThread();
         GL33.glBindTexture(dimension.toInt(), getId());
     }
 

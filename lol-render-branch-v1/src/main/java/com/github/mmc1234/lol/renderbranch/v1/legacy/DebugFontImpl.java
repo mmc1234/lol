@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current;
+package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
 import com.github.mmc1234.lol.base.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
@@ -23,10 +23,8 @@ import it.unimi.dsi.fastutil.chars.*;
 import jdk.incubator.foreign.*;
 import org.apache.commons.io.*;
 import org.lwjgl.stb.*;
-import org.lwjgl.system.*;
 
 import java.io.*;
-import java.nio.*;
 
 public class DebugFontImpl {
     protected Char2ObjectMap<CharDescription> descriptionMap;

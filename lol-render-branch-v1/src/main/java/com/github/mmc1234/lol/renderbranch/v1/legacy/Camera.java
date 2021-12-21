@@ -18,82 +18,81 @@ package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
 import com.github.mmc1234.lol.base.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
-import com.github.mmc1234.lol.renderbranch.v1.current.*;
-import com.google.common.base.*;
+import com.github.mmc1234.lol.renderbranch.v1.legacy.*;
 import org.joml.*;
-import org.lwjgl.opengl.*;
 
 import java.lang.Math;
 
 public class Camera {
-    public static final Float4 DEFAULT_COLOR = new Float4(0.25f,0.25f,0.25f,1f);
-    private Float4 background = DEFAULT_COLOR;
+    public final Transform transform = new Transform();
+
+    private final Matrix4f projectionMatrix = new Matrix4f();
+
+    private final Matrix4f viewMatrix = new Matrix4f();
+
+    private final Matrix4f modelMatrix = new Matrix4f();
+
+    private final Matrix4f modelViewMatrix = new Matrix4f();
+
     private FrameBuffer frameBuffer;
+
     private int clearMask;
-    public final Transform transform;
 
-    private float fov;
-    private float aspectRatio;
-    private float zFar, zNear;
+    private Float4 background = new Float4(0.25f, 0.25f, 0.25f,1);
 
+    float fov, aspect, zNear, zFar;
 
-    private final Matrix4f projectionMatrix;
+    public int getClearMask() {
+        return clearMask;
+    }
 
-    private final Matrix4f modelViewMatrix;
+    public void setClearMask(int clearMask) {
+        this.clearMask = clearMask;
+    }
 
-    private final Matrix4f viewMatrix;
+    public Float4 getBackground() {
+        return background;
+    }
 
-    public final Matrix4f getProjectionMatrix() {
-        return projectionMatrix.setPerspective(fov, aspectRatio, zNear, zFar);
+    public void setBackground(Float4 background) {
+        this.background = background;
+    }
+
+    public void setFrameBuffer(FrameBuffer frameBuffer) {
+        this.frameBuffer = FrameBuffer.notNull(frameBuffer);
+    }
+
+    public FrameBuffer getFrameBuffer() {
+        return frameBuffer;
+    }
+
+    public Matrix4f getProjectionMatrix() {
+        return projectionMatrix;
+    }
+
+    public Matrix4f getModelMatrix() {
+        return modelMatrix;
     }
 
     public Matrix4f getViewMatrix() {
-        Vector3f cameraPos = transform.position;
-        Vector3f rotation = transform.rotation;
-
-        viewMatrix.identity();
-        // First do the rotation so camera rotates over its position
-        viewMatrix.rotate((float)Math.toRadians(rotation.x), new Vector3f(1, 0, 0)) .rotate((float)Math.toRadians(rotation.y), new Vector3f(0, 1, 0));
-        // Then do the translation
-        viewMatrix.translate(-cameraPos.x, -cameraPos.y, -cameraPos.z);
         return viewMatrix;
     }
 
-    public Matrix4f getModelViewMatrix(Matrix4f viewMatrix) {
-        modelViewMatrix.identity().translate(new Vector3f(0)).
-                rotateX((float)Math.toRadians(-0)).
-                rotateY((float)Math.toRadians(-0)).
-                rotateZ((float)Math.toRadians(-0)).
-                scale(1);
-        Matrix4f viewCurr = new Matrix4f(viewMatrix);
-        return viewCurr.mul(modelViewMatrix);
+    public Matrix4f getModelViewMatrix() {
+        return modelViewMatrix;
     }
-
-
-    public Camera() {
-        transform = new Transform();
-        projectionMatrix = new Matrix4f();
-        modelViewMatrix = new Matrix4f();
-        viewMatrix = new Matrix4f();
-        setZNear(0.01f);
-        setZFar(1000);
-        setFov((float) Math.toRadians(60f));
-        setAspectRatio(1);
-    }
-
 
     public void setFov(float fov) {
         this.fov = fov;
     }
 
-    public void setAspectRatio(float aspectRatio) {
-        this.aspectRatio = aspectRatio;
+    public void setAspect(float aspect) {
+        this.aspect = aspect;
     }
 
     public void setZFar(float zFar) {
         this.zFar = zFar;
     }
-
 
     public void setZNear(float zNear) {
         this.zNear = zNear;
@@ -103,45 +102,38 @@ public class Camera {
         return fov;
     }
 
-    public float getAspectRatio() {
-        return aspectRatio;
-    }
-
-    public float getZFar() {
-        return zFar;
+    public float getAspect() {
+        return aspect;
     }
 
     public float getZNear() {
         return zNear;
     }
 
-    public int getClearMask() {
-        return clearMask;
+    public float getZFar() {
+        return zFar;
     }
 
-    public void clear() {
-        Preconditions.checkState(Render.isRenderThread());
-        GL33.glClearColor(background.red(), background.green(), background.blue(), background.alpha());
-        GL33.glClear(clearMask);
+    public void updateProjection() {
+        projectionMatrix.identity().setPerspective(fov, aspect, zNear, zFar);
+    }
+    public void updateViewMatrix() {
+        viewMatrix.identity();
+        // First do the rotation so camera rotates over its position
+        viewMatrix.rotate((float) Math.toRadians(transform.rotation.x), new Vector3f(1, 0, 0))
+                .rotate((float)Math.toRadians(transform.rotation.y), new Vector3f(0, 1, 0));
+        // Then do the translation
+        viewMatrix.translate(-transform.position.x, -transform.position.y, -transform.position.z);
     }
 
-    public void setClearMask(int clearMask) {
-        this.clearMask = clearMask;
+    public void buildModelViewMatrix(Transform transformIn, Matrix4f viewMatrix) {
+        modelMatrix.identity().translate(transformIn.getPosition()).
+                rotateX((float)Math.toRadians(-transformIn.rotation.x)).
+                rotateY((float)Math.toRadians(-transformIn.rotation.y)).
+                rotateZ((float)Math.toRadians(-transformIn.rotation.z)).
+                scale(transformIn.getScale());
+        modelViewMatrix.set(viewMatrix);
+        modelViewMatrix.mul(modelMatrix);
     }
 
-    public void setFrameBuffer(FrameBuffer frameBuffer) {
-        this.frameBuffer = frameBuffer;
-    }
-
-    public FrameBuffer getFrameBuffer() {
-        return frameBuffer;
-    }
-
-    public void setBackground(Float4 background) {
-        this.background = background == null ? DEFAULT_COLOR : background;
-    }
-
-    public Float4 getBackground() {
-        return background;
-    }
 }

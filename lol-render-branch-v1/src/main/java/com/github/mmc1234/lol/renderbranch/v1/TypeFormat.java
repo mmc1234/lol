@@ -20,9 +20,6 @@ import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL12.*;
 import static org.lwjgl.opengl.GL30.GL_HALF_FLOAT;
 
-/**
- * @link https://blog.csdn.net/weixin_34216107/article/details/92071758
- * */
 public enum TypeFormat {
     FLOAT16, FLOAT32,
     INT8, UINT8, INT16, UINT16, INT32, UINT32,

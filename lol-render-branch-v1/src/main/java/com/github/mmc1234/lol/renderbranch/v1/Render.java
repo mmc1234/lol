@@ -31,6 +31,14 @@ public class Render {
         renderThread = Thread.currentThread();
     }
 
+    public static void assertRenderThread() {
+        if(!isRenderThread()) throw constructThreadException();
+    }
+
+    private static IllegalStateException constructThreadException() {
+        return new IllegalStateException("Render called from wrong thread");
+    }
+
     public static void recordRenderCall(RenderCall renderCall) {
         recordingQueue.offer(renderCall);
     }
@@ -47,7 +55,7 @@ public class Render {
         isReplayingQueue = true;
 
         while (!recordingQueue.isEmpty()) {
-            RenderCall renderCall = (RenderCall) recordingQueue.poll();
+            RenderCall renderCall = recordingQueue.poll();
             renderCall.execute();
         }
 

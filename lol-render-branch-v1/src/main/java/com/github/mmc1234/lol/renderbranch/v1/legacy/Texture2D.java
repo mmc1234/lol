@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current;
+package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
 import com.github.mmc1234.lol.renderbranch.v1.*;
 import com.google.common.base.*;
 import jdk.incubator.foreign.*;
 import org.lwjgl.opengl.*;
-import org.lwjgl.system.*;
 
 public class Texture2D extends AbstractTexture {
 
@@ -42,9 +41,10 @@ public class Texture2D extends AbstractTexture {
 
     @Override
     public void close() {
+        Render.assertRenderThread();
         if(id != 0) {
-            // TODO
-            Preconditions.checkState(Render.isRenderThread());
+            GL33.glDeleteTextures(id);
+            id = 0;
         }
     }
 
@@ -53,29 +53,28 @@ public class Texture2D extends AbstractTexture {
         this.height = height;
     }
     public void reload() {
+        Render.assertRenderThread();
         GL33.glTexImage2D(dimension.toInt(), 0, getInternalFormat().toInt(),
                 getWidth(), getHeight(), 0, getFormat().toInt(), getFormat().toTypeInt(), 0);
     }
     public void reload(MemorySegment pixels) {
-        Preconditions.checkState(Render.isRenderThread());
-
+        Render.assertRenderThread();
         if(id != 0) {
-            Preconditions.checkState(dimension.toInt() == GL33.GL_TEXTURE_2D);
-
             GL33.glTexImage2D(dimension.toInt(), 0, getInternalFormat().toInt(),
                     getWidth(), getHeight(), 0, getFormat().toInt(), getFormat().toTypeInt(), pixels.address().toRawLongValue());
         }
     }
 
     public static void bindZero() {
+        Render.assertRenderThread();
         GL33.glBindTexture(TextureDimension.TEX2D.toInt(), 0);
     }
 
     @Override
     public void init() {
-        Preconditions.checkState(Render.isRenderThread());
+        Render.assertRenderThread();
         if(id == 0) {
-            // create and bind
+            // Create and bind
             id = GL33.glGenTextures();
             GL33.glActiveTexture(GL33.GL_TEXTURE0+0);
             GL33.glBindTexture(dimension.toInt(), getId());
@@ -84,6 +83,9 @@ public class Texture2D extends AbstractTexture {
             GL33.glPixelStorei(GL11.GL_UNPACK_ALIGNMENT, 1);
             GL33.glTexParameteri(dimension.toInt(), GL33.GL_TEXTURE_MIN_FILTER, minFilter.toInt());
             GL33.glTexParameteri(dimension.toInt(), GL33.GL_TEXTURE_MAG_FILTER, magFilter.toInt());
+            GL33.glTexParameteri(dimension.toInt(), GL33.GL_TEXTURE_WRAP_S, warpModeU.toInt());
+            GL33.glTexParameteri(dimension.toInt(), GL33.GL_TEXTURE_WRAP_T, warpModeV.toInt());
+
             // GL33.glTexParameteri(GL33. GL_TEXTURE_2D, GL33.GL_GENERATE_MIPMAP, GL33.GL_TRUE);
             // GL33.glTexParameteri(GL33. GL_TEXTURE_2D, GL33.GL_TEXTURE_MAX_LEVEL, mipmapLevel);
             //GL33.glBindTexture(dimension.toInt(), 0);

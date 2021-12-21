@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current;
+package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
 import com.github.mmc1234.lol.renderbranch.v1.*;
 
 import java.util.*;
 
 public class VertexBuffer {
-    private List<VertexAttribDescription> descriptionList;
+    private List<VertexAttrib> descriptionList;
     Vao vao = new Vao();
     Vbo[] vboArray;
-    public VertexBuffer(List<VertexAttribDescription> descriptionList) {
+    public VertexBuffer(List<VertexAttrib> descriptionList) {
         this.descriptionList = descriptionList;
         vboArray = new Vbo[descriptionList.size()];
         for(int i = 0;i<descriptionList.size(); i++) {
             vboArray[i] = new Vbo(i, Objects.requireNonNull(descriptionList.get(i)));
         }
     }
-    public static final VertexBuffer create(List<VertexAttribDescription> descriptionList) {
+    public static final VertexBuffer create(List<VertexAttrib> descriptionList) {
         return new VertexBuffer(descriptionList);
     }
 

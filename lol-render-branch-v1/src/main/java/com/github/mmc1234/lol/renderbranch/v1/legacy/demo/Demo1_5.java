@@ -14,14 +14,15 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current.demo;
+package com.github.mmc1234.lol.renderbranch.v1.legacy.demo;
 
 import com.github.mmc1234.lol.base.Timer;
 import com.github.mmc1234.lol.base.*;
 import com.github.mmc1234.lol.glfw.*;
 import com.github.mmc1234.lol.glfw.impl.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
-import com.github.mmc1234.lol.renderbranch.v1.current.*;
+import com.github.mmc1234.lol.renderbranch.v1.legacy.Camera;
+import com.github.mmc1234.lol.renderbranch.v1.legacy.*;
 import com.google.common.base.*;
 import com.google.inject.*;
 import jdk.incubator.foreign.*;
@@ -31,6 +32,7 @@ import org.lwjgl.opengl.*;
 import org.lwjgl.stb.*;
 
 import java.io.*;
+import java.lang.*;
 import java.lang.Math;
 import java.util.*;
 import java.util.concurrent.atomic.*;
@@ -38,9 +40,9 @@ import java.util.concurrent.atomic.*;
 import static com.github.mmc1234.lol.glfw.GLFW.*;
 
 /**
- * 简单的资源使用演示，渲染了DebugFont
+ * 简单的资源使用演示，渲染了一个纹理
  * */
-public class Demo1_6 {
+public class Demo1_5 {
     Window window = Window.ofLong(0);
     final AtomicBoolean shouldExit = new AtomicBoolean();
     final Timer renderTimer = Timer.newSystem(this::recordRender, 1000/60, true);
@@ -48,15 +50,13 @@ public class Demo1_6 {
     Mesh coordMesh;
     VertexBuffer quadVertexBuffer;
     VertexBuffer coordVertexBuffer;
-    List<VertexAttribDescription> defaultVertexAttribDescriptionList = VertexAttribDescription.list(
+    List<VertexAttrib> defaultVertexAttribDescriptionList = VertexAttrib.list(
             TypeFormat.FLOAT32, 3,
             TypeFormat.FLOAT32, 2);
     ShaderProgram mainProgram;
     Texture2D myTexture;
-
     Camera cam = new Camera();
     double lastInputTime = -1;
-    DebugFont debugFont;
 
     static final String SHADERS_PATH = "shaders/";
 
@@ -87,6 +87,7 @@ public class Demo1_6 {
         mainProgram = ShaderProgram.newInstance(
                 ResourceUtil.loadModuleText(SHADERS_PATH+ "simple_cam_vertex.glsl"),
                 ResourceUtil.loadModuleText(SHADERS_PATH+ "simple_uv_fragment.glsl"));
+
         RenderThread.launch();
         Render.recordRenderCall(this::renderStart);
     }
@@ -116,23 +117,20 @@ public class Demo1_6 {
         glfwSetCursorPosCallback(window, (w,x,y)->cursorPos(x,y));
         glfwSetCursorEnterCallback(window, (w, h)->hovered(h));
 
-        GL33.glEnable(GL11.GL_BLEND);
-        GL33.glBlendFunc( GL11.GL_SRC_ALPHA ,GL11.GL_ONE_MINUS_SRC_ALPHA );
         GL33.glEnable(KHRDebug.GL_DEBUG_OUTPUT);
-
         KHRDebug.glDebugMessageCallback((src, type, id, severity, len, msg, data) -> {
             System.out.printf("[Src=%s, Type=%s, Id=%d, Severity=%s]\n  %s\n",
                     DebugUtil.getSourceDescription(src),
                     DebugUtil.getTypeDescription(type),id,DebugUtil.getSeverityDescription(severity), GLDebugMessageCallback.getMessage(len, msg));
         }, 0);
 
-        debugFont = new DebugFont("simhei.ttf");
-        debugFont.init();
-
         Image img = Sugars.noCatch(()->loadImage(Sugars.noCatch(()->ResourceUtil.getModuleResourceAsStream("textures/texture.png"))));
+
         myTexture = new Texture2D(TextureFormat.R8G8B8A8_UINT, img.w, img.h);
         myTexture.init();
+
         myTexture.reload(img.pixels);
+
         Texture2D.bindZero();
 
         mainProgram.init();
@@ -256,13 +254,9 @@ public class Demo1_6 {
                     false, cam.getModelViewMatrix().get(new float[16]));
             quadVertexBuffer.getVao().bind();
             GL33.glActiveTexture(GL33.GL_TEXTURE0);
-
-            //myTexture.bind();
-            debugFont.getFontTexture().bind();
-            GL33.nglDrawElements(GL33.GL_TRIANGLES, 6, GL33.GL_UNSIGNED_INT, quadMesh.getIndices().address().toRawLongValue());
-
             myTexture.bind();
-            GL33.glLineWidth(8);
+            GL33.nglDrawElements(GL33.GL_TRIANGLES, 6, GL33.GL_UNSIGNED_INT, quadMesh.getIndices().address().toRawLongValue());
+            GL33.glLineWidth(3);
             coordVertexBuffer.getVao().bind();
             GL33.nglDrawElements(GL33.GL_LINES, 6, GL33.GL_UNSIGNED_INT, coordMesh.getIndices().address().toRawLongValue());
             GL33.glLineWidth(1);
@@ -278,7 +272,6 @@ public class Demo1_6 {
         quadVertexBuffer.close();
         mainProgram.close();
         myTexture.close();
-        debugFont.close();
         Preconditions.checkState(Render.isRenderThread());
         if(window != Window.EMPTY) {
             glfwHideWindow(window);
@@ -304,7 +297,7 @@ public class Demo1_6 {
         }
     }
 
-    public Demo1_6() {
+    public Demo1_5() {
         init();
         loop();
         close();
@@ -331,6 +324,6 @@ public class Demo1_6 {
 
     public static void main(String[] args) {
         Guice.createInjector(new ImplGLFWModule());
-        new Demo1_6();
+        new Demo1_5();
     }
 }

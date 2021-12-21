@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current;
+package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
 import com.github.mmc1234.lol.renderbranch.v1.*;
 import com.google.common.base.*;
@@ -26,9 +26,9 @@ import static org.lwjgl.opengl.GL30.*;
 public class Vbo {
     int id;
     int index;
-    VertexAttribDescription description;
+    VertexAttrib description;
     int draw = GL33.GL_STATIC_DRAW;
-    public Vbo(int index, VertexAttribDescription description) {
+    public Vbo(int index, VertexAttrib description) {
         this.index = index;
         this.description = description;
     }

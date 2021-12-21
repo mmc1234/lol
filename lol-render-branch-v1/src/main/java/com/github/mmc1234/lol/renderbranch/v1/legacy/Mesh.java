@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current;
+package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
 import com.github.mmc1234.lol.renderbranch.v1.*;
 import jdk.incubator.foreign.*;
@@ -22,16 +22,16 @@ import jdk.incubator.foreign.*;
 import java.util.*;
 
 public class Mesh {
-    List<VertexAttribDescription> descriptionList;
+    List<VertexAttrib> descriptionList;
     MemorySegment indices;
 
-    public Mesh(List<VertexAttribDescription> list) {
+    public Mesh(List<VertexAttrib> list) {
         descriptionList = list;
         memorySegments = new MemorySegment[descriptionList.size()];
     }
 
     private MemorySegment[] memorySegments;
-    public static final Mesh create(List<VertexAttribDescription> list) {
+    public static final Mesh create(List<VertexAttrib> list) {
         return new Mesh(list);
     }
 

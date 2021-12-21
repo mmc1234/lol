@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current.demo;
+package com.github.mmc1234.lol.renderbranch.v1.legacy.demo;
 
 import com.github.mmc1234.lol.base.Timer;
 import com.github.mmc1234.lol.base.*;
 import com.github.mmc1234.lol.glfw.*;
 import com.github.mmc1234.lol.glfw.impl.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
-import com.github.mmc1234.lol.renderbranch.v1.current.*;
+import com.github.mmc1234.lol.renderbranch.v1.legacy.*;
 import com.google.common.base.*;
 import com.google.inject.*;
 import jdk.incubator.foreign.*;
@@ -45,7 +45,7 @@ public class Demo1_4_1 {
     final Timer renderTimer = Timer.newSystem(this::recordRender, 1000/60, true);
     Mesh quadMesh;
     VertexBuffer quadVertexBuffer;
-    List<VertexAttribDescription> defaultVertexAttribDescriptionList = VertexAttribDescription.list(
+    List<VertexAttrib> defaultVertexAttribDescriptionList = VertexAttrib.list(
             TypeFormat.FLOAT32, 3,
             TypeFormat.FLOAT32, 2);
     ShaderProgram mainProgram;

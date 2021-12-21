@@ -14,14 +14,15 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current.demo;
+package com.github.mmc1234.lol.renderbranch.v1.legacy.demo;
 
 import com.github.mmc1234.lol.base.Timer;
 import com.github.mmc1234.lol.base.*;
 import com.github.mmc1234.lol.glfw.*;
 import com.github.mmc1234.lol.glfw.impl.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
-import com.github.mmc1234.lol.renderbranch.v1.current.*;
+import com.github.mmc1234.lol.renderbranch.v1.legacy.Camera;
+import com.github.mmc1234.lol.renderbranch.v1.legacy.*;
 import com.google.common.base.*;
 import com.google.inject.*;
 import jdk.incubator.foreign.*;
@@ -55,7 +56,7 @@ public class Demo1_8 {
     Mesh coordMesh;
     VertexBuffer quadVertexBuffer;
     VertexBuffer coordVertexBuffer;
-    List<VertexAttribDescription> defaultVertexAttribDescriptionList = VertexAttribDescription.list(
+    List<VertexAttrib> defaultVertexAttribList = VertexAttrib.list(
             TypeFormat.FLOAT32, 3,
             TypeFormat.FLOAT32, 2);
     ShaderProgram mainProgram;
@@ -67,12 +68,12 @@ public class Demo1_8 {
     static final String SHADERS_PATH = "shaders/";
 
     public void init() {
-        quadMesh = Mesh.create(defaultVertexAttribDescriptionList);
+        quadMesh = Mesh.create(defaultVertexAttribList);
         quadMesh.setData(0, MemorySegmentUtil.createFromFloatArray(-1, 1, -1,  -1, -1, -1,  1, -1, -1,  1, 1, -1));
         quadMesh.setData(1, MemorySegmentUtil.createFromFloatArray(0, 0, 0, 1, 1, 1, 1, 0));
         quadMesh.setIndices(MemorySegmentUtil.createFromIntArray(0, 1, 3, 3, 1, 2));
 
-        coordMesh = Mesh.create(defaultVertexAttribDescriptionList);
+        coordMesh = Mesh.create(defaultVertexAttribList);
         coordMesh.setData(0, MemorySegmentUtil.createFromFloatArray(
                 -1,-1,-1,  100,-1,-1,
                 -1,-1,-1, -1, 100,-1,
@@ -87,8 +88,8 @@ public class Demo1_8 {
         cam.setZNear(0.01f);
         cam.setZFar(1000);
 
-        quadVertexBuffer = VertexBuffer.create(defaultVertexAttribDescriptionList);
-        coordVertexBuffer = VertexBuffer.create(defaultVertexAttribDescriptionList);
+        quadVertexBuffer = VertexBuffer.create(defaultVertexAttribList);
+        coordVertexBuffer = VertexBuffer.create(defaultVertexAttribList);
 
         mainProgram = ShaderProgram.newInstance(
                 ResourceUtil.loadModuleText(SHADERS_PATH+ "simple_cam_vertex.glsl"),

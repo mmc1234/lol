@@ -18,9 +18,6 @@ package com.github.mmc1234.lol.renderbranch.v1;
 
 import org.lwjgl.opengl.*;
 
-/**
- * OpenGL的枚举有6个，但是其实只要根据是否启用mipmap切换就好了
- * */
 public enum TextureFilterMode {
     POINT, LINEAR,
     NEAREST_MIPMAP_POINT,NEAREST_MIPMAP_LINEAR,

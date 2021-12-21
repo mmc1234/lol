@@ -14,14 +14,15 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current.demo;
+package com.github.mmc1234.lol.renderbranch.v1.legacy.demo;
 
 import com.github.mmc1234.lol.base.Timer;
 import com.github.mmc1234.lol.base.*;
 import com.github.mmc1234.lol.glfw.*;
 import com.github.mmc1234.lol.glfw.impl.*;
 import com.github.mmc1234.lol.renderbranch.v1.*;
-import com.github.mmc1234.lol.renderbranch.v1.current.*;
+import com.github.mmc1234.lol.renderbranch.v1.legacy.Camera;
+import com.github.mmc1234.lol.renderbranch.v1.legacy.*;
 import com.google.common.base.*;
 import com.google.inject.*;
 import jdk.incubator.foreign.*;
@@ -31,7 +32,6 @@ import org.lwjgl.opengl.*;
 import org.lwjgl.stb.*;
 
 import java.io.*;
-import java.lang.*;
 import java.lang.Math;
 import java.util.*;
 import java.util.concurrent.atomic.*;
@@ -39,9 +39,9 @@ import java.util.concurrent.atomic.*;
 import static com.github.mmc1234.lol.glfw.GLFW.*;
 
 /**
- * 简单的资源使用演示，渲染了一个纹理
+ * 简单的资源使用演示，渲染了一个FBO的Color附件
  * */
-public class Demo1_5 {
+public class Demo1_7 {
     Window window = Window.ofLong(0);
     final AtomicBoolean shouldExit = new AtomicBoolean();
     final Timer renderTimer = Timer.newSystem(this::recordRender, 1000/60, true);
@@ -49,17 +49,20 @@ public class Demo1_5 {
     Mesh coordMesh;
     VertexBuffer quadVertexBuffer;
     VertexBuffer coordVertexBuffer;
-    List<VertexAttribDescription> defaultVertexAttribDescriptionList = VertexAttribDescription.list(
+    List<VertexAttrib> defaultVertexAttribDescriptionList = VertexAttrib.list(
             TypeFormat.FLOAT32, 3,
             TypeFormat.FLOAT32, 2);
     ShaderProgram mainProgram;
     Texture2D myTexture;
     Camera cam = new Camera();
     double lastInputTime = -1;
+    FrameBuffer frameBuffer;
+    Texture2D fboColor;
 
     static final String SHADERS_PATH = "shaders/";
 
     public void init() {
+        frameBuffer = FrameBuffer.newInstance();
         quadMesh = Mesh.create(defaultVertexAttribDescriptionList);
         quadMesh.setData(0, MemorySegmentUtil.createFromFloatArray(-1, 1, -1,  -1, -1, -1,  1, -1, -1,  1, 1, -1));
         quadMesh.setData(1, MemorySegmentUtil.createFromFloatArray(0, 0, 0, 1, 1, 1, 1, 0));
@@ -127,10 +130,17 @@ public class Demo1_5 {
 
         myTexture = new Texture2D(TextureFormat.R8G8B8A8_UINT, img.w, img.h);
         myTexture.init();
-
         myTexture.reload(img.pixels);
 
+        fboColor = new Texture2D(TextureFormat.R8G8B8A8_UINT, 256, 256);
+        fboColor.init();
+        fboColor.reload();
         Texture2D.bindZero();
+
+        frameBuffer.init();
+        FrameBuffer.attachTexture2D(fboColor);
+        FrameBuffer.chunk();
+        FrameBuffer.bindZero();
 
         mainProgram.init();
         mainProgram.createUniform("texture_sampler");
@@ -243,6 +253,7 @@ public class Demo1_5 {
             }
             GL33.glClearColor(0.25f,0.25f, 0.25f, 1);
             GL33.glClear(GL33.GL_COLOR_BUFFER_BIT);
+            frameBuffer.bind();
             mainProgram.use();
             cam.updateProjection();
             cam.updateViewMatrix();
@@ -255,10 +266,17 @@ public class Demo1_5 {
             GL33.glActiveTexture(GL33.GL_TEXTURE0);
             myTexture.bind();
             GL33.nglDrawElements(GL33.GL_TRIANGLES, 6, GL33.GL_UNSIGNED_INT, quadMesh.getIndices().address().toRawLongValue());
+
+            FrameBuffer.bindZero();
+            fboColor.bind();
+            GL33.nglDrawElements(GL33.GL_TRIANGLES, 6, GL33.GL_UNSIGNED_INT, quadMesh.getIndices().address().toRawLongValue());
+
             GL33.glLineWidth(3);
             coordVertexBuffer.getVao().bind();
             GL33.nglDrawElements(GL33.GL_LINES, 6, GL33.GL_UNSIGNED_INT, coordMesh.getIndices().address().toRawLongValue());
             GL33.glLineWidth(1);
+
+
             Vao.bindZero();
             Texture2D.bindZero();
             ShaderProgram.useZero();
@@ -296,7 +314,7 @@ public class Demo1_5 {
         }
     }
 
-    public Demo1_5() {
+    public Demo1_7() {
         init();
         loop();
         close();
@@ -323,6 +341,6 @@ public class Demo1_5 {
 
     public static void main(String[] args) {
         Guice.createInjector(new ImplGLFWModule());
-        new Demo1_5();
+        new Demo1_7();
     }
 }

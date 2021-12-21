@@ -20,7 +20,7 @@ import org.joml.*;
 
 import java.lang.Math;
 
-public class Transform {
+public final class Transform {
     public final Vector3f position;
 
     public final Vector3f rotation;

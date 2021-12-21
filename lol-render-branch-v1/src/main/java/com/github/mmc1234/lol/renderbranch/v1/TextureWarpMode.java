@@ -16,6 +16,8 @@
 
 package com.github.mmc1234.lol.renderbranch.v1;
 
+import org.lwjgl.opengl.*;
+
 public enum TextureWarpMode {
     REPEAT,
     /**
@@ -27,4 +29,13 @@ public enum TextureWarpMode {
      * clamp to edge
      * */
     MIRROR_ONCE;
+
+    public int toInt() {
+        return switch (this) {
+            case REPEAT -> GL33.GL_REPEAT;
+            case CLAMP -> GL33.GL_CLAMP_TO_BORDER;
+            case MIRROR -> GL33.GL_MIRRORED_REPEAT;
+            case MIRROR_ONCE -> GL33.GL_CLAMP_TO_EDGE;
+        };
+    }
 }

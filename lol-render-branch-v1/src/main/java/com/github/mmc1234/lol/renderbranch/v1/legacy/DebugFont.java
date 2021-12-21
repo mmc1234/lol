@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-package com.github.mmc1234.lol.renderbranch.v1.current;
+package com.github.mmc1234.lol.renderbranch.v1.legacy;
 
 import com.github.mmc1234.lol.renderbranch.v1.*;
 import com.google.common.base.*;
-import org.lwjgl.system.windows.*;
 
 public class DebugFont {
     private Texture2D fontTexture;
