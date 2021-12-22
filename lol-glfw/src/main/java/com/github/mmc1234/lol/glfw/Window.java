@@ -17,12 +17,14 @@
 package com.github.mmc1234.lol.glfw;
 
 public record Window(long address) {
-    public static final Window ofLong(long address) {
-        if(address == 0) return EMPTY;
+    public static Window ofLong(final long address) {
+        if (address == 0) return Window.EMPTY;
         return new Window(address);
     }
+
     public static final Window EMPTY = new Window(0);
-    public static final boolean isEmpty(Window window) {
-        return window == null || EMPTY.equals(window) || window.address == 0;
+
+    public static boolean isEmpty(final Window window) {
+        return window == null || Window.EMPTY.equals(window) || window.address == 0;
     }
 }

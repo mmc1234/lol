@@ -26,16 +26,17 @@ public final class ResourceUtil {
     private ResourceUtil() {
         throw new IllegalCallerException();
     }
-    public static final InputStream getModuleResourceAsStream(final String name) throws IOException {
+
+    public static final InputStream getModuleResourceAsStream(String name) throws IOException {
         return ResourceUtil.class.getModule().getResourceAsStream(name);
     }
 
-    public static final String loadModuleText(final String name, final Charset charset) {
-        return Sugars.noCatch(()->IOUtils.toString(Sugars.noCatch(()-> ResourceUtil.getModuleResourceAsStream(name)), charset));
+    public static final String loadModuleText(String name, Charset charset) {
+        return Sugars.noCatch(() -> IOUtils.toString(Sugars.noCatch(() -> getModuleResourceAsStream(name)), charset));
     }
 
-    public static final String loadModuleText(final String name) {
-        return Sugars.noCatch(()->IOUtils.toString(Sugars.noCatch(()-> ResourceUtil.getModuleResourceAsStream(name)),
+    public static final String loadModuleText(String name) {
+        return Sugars.noCatch(() -> IOUtils.toString(Sugars.noCatch(() -> getModuleResourceAsStream(name)),
                 Charset.defaultCharset()));
     }
 }

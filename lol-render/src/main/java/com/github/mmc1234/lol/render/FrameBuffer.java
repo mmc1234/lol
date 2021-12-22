@@ -24,16 +24,16 @@ public class FrameBuffer {
     private int id;
     private final boolean isDefaultBuffer;
 
-    public static final FrameBuffer notNull(final FrameBuffer frameBuffer) {
-        return frameBuffer == null ? FrameBuffer.DEFAULT : frameBuffer;
+    public static final FrameBuffer notNull(FrameBuffer frameBuffer) {
+        return frameBuffer == null ? DEFAULT : frameBuffer;
     }
 
-    private FrameBuffer(final boolean isDefaultBuffer) {
+    private FrameBuffer(boolean isDefaultBuffer) {
         this.isDefaultBuffer = isDefaultBuffer;
     }
 
     public static FrameBuffer getDefault() {
-        return FrameBuffer.DEFAULT;
+        return DEFAULT;
     }
 
     public static final FrameBuffer newInstance() {
@@ -41,9 +41,9 @@ public class FrameBuffer {
     }
 
     public void close() {
-        if (!this.isDefaultBuffer && Render.isRenderThread()) {
-            GL30.glDeleteFramebuffers(this.id);
-            this.id = 0;
+        if (!isDefaultBuffer && Render.isRenderThread()) {
+            GL30.glDeleteFramebuffers(id);
+            id = 0;
         }
     }
 
@@ -51,28 +51,28 @@ public class FrameBuffer {
         Preconditions.checkState(GL30.glCheckFramebufferStatus(GL30.GL_FRAMEBUFFER) == GL30.GL_FRAMEBUFFER_COMPLETE);
     }
 
-    public static void attachTexture2D(final Texture2D texture) {
+    public static void attachTexture2D(Texture2D texture) {
         GL30.glFramebufferTexture2D(GL30.GL_FRAMEBUFFER, GL30.GL_COLOR_ATTACHMENT0, texture.getDimension().toInt(), texture.getId(), 0);
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public void bind() {
-        if(Render.isRenderThread()) {
-            GL30.glBindFramebuffer(GL30.GL_DRAW_FRAMEBUFFER, this.id);
+        if (Render.isRenderThread()) {
+            GL30.glBindFramebuffer(GL30.GL_DRAW_FRAMEBUFFER, id);
         }
     }
 
     public static void bindZero() {
-        FrameBuffer.DEFAULT.bind();
+        DEFAULT.bind();
     }
 
     public void init() {
-        if (!this.isDefaultBuffer && Render.isRenderThread()) {
-            id = GL30.glGenFramebuffers();
-            this.bind();
+        if (!isDefaultBuffer && Render.isRenderThread()) {
+            this.id = GL30.glGenFramebuffers();
+            bind();
             // TODO
         }
     }

@@ -22,31 +22,33 @@ public class VertexBuffer {
     private final List<VertexAttrib> descriptionList;
     Vao vao = new Vao();
     Vbo[] vboArray;
-    public VertexBuffer(final List<VertexAttrib> descriptionList) {
+
+    public VertexBuffer(List<VertexAttrib> descriptionList) {
         this.descriptionList = descriptionList;
-        this.vboArray = new Vbo[descriptionList.size()];
-        for(int i = 0;i<descriptionList.size(); i++) {
-            this.vboArray[i] = new Vbo(i, Objects.requireNonNull(descriptionList.get(i)));
+        vboArray = new Vbo[descriptionList.size()];
+        for (int i = 0; i < descriptionList.size(); i++) {
+            vboArray[i] = new Vbo(i, Objects.requireNonNull(descriptionList.get(i)));
         }
     }
-    public static final VertexBuffer create(final List<VertexAttrib> descriptionList) {
+
+    public static final VertexBuffer create(List<VertexAttrib> descriptionList) {
         return new VertexBuffer(descriptionList);
     }
 
     public Vao getVao() {
-        return this.vao;
+        return vao;
     }
 
-    public Vbo getVbo(final int index) {
-        return this.vboArray[index];
+    public Vbo getVbo(int index) {
+        return vboArray[index];
     }
 
     public void close() {
-        if(Render.isRenderThread()) {
-            for(final var vbo : this.vboArray) {
+        if (Render.isRenderThread()) {
+            for (var vbo : vboArray) {
                 vbo.close();
             }
-            this.vao.close();
+            vao.close();
         }
     }
 }

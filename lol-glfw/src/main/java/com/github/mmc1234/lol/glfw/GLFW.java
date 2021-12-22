@@ -325,468 +325,472 @@ public class GLFW {
     private static GlfwBackend IMPL;
 
     public static boolean glfwInit() {
-        return IMPL.glfwInit();
+        return GLFW.IMPL.glfwInit();
     }
 
     public static void glfwTerminate() {
-        IMPL.glfwTerminate();
+        GLFW.IMPL.glfwTerminate();
     }
 
-    public static void glfwInitHint(int hint, int value) {
-        IMPL.glfwInitHint(hint,value);
+    public static void glfwInitHint(final int hint, final int value) {
+        GLFW.IMPL.glfwInitHint(hint, value);
     }
 
-    public static void glfwGetVersion(long majorOut, long minorOut, long revOut) {
-        IMPL.glfwGetVersion(majorOut, minorOut, revOut);
+    public static void glfwGetVersion(final long majorOut, final long minorOut, final long revOut) {
+        GLFW.IMPL.glfwGetVersion(majorOut, minorOut, revOut);
     }
 
     public static String glfwGetVersionString() {
-        return IMPL.glfwGetVersionString();
+        return GLFW.IMPL.glfwGetVersionString();
     }
 
-    public static int glfwGetError(ObjRef<String> description) {
-        return IMPL.glfwGetError(description);
+    public static int glfwGetError(final ObjRef<String> description) {
+        return GLFW.IMPL.glfwGetError(description);
     }
 
-    public static void glfwSetErrorCallback(ErrorCallback cb) {
-        IMPL.glfwSetErrorCallback(cb);
+    public static void glfwSetErrorCallback(final ErrorCallback cb) {
+        GLFW.IMPL.glfwSetErrorCallback(cb);
     }
 
     public static Monitor[] glfwGetMonitors() {
-        return IMPL.glfwGetMonitors();
+        return GLFW.IMPL.glfwGetMonitors();
     }
 
     public static Monitor glfwGetPrimaryMonitor() {
-        return IMPL.glfwGetPrimaryMonitor();
+        return GLFW.IMPL.glfwGetPrimaryMonitor();
     }
 
-    public static void glfwGetMonitorPos(Monitor monitor, long xOut, long yOut) {
-        IMPL.glfwGetMonitorPos(monitor, xOut,yOut);
+    public static void glfwGetMonitorPos(final Monitor monitor, final long xOut, final long yOut) {
+        GLFW.IMPL.glfwGetMonitorPos(monitor, xOut, yOut);
     }
 
-    public static Int2 glfwGetMonitorPos(Monitor monitor) {
+    public static Int2 glfwGetMonitorPos(final Monitor monitor) {
 
         throw new UnsupportedOperationException();
         //return IMPL.glfwGetMonitorPos(monitor);
     }
 
-    public static IntRectangle glfwGetMonitorWorkarea(Monitor monitor) {
+    public static IntRectangle glfwGetMonitorWorkarea(final Monitor monitor) {
 
         throw new UnsupportedOperationException();
         //return IMPL.glfwGetMonitorWorkarea(monitor);
     }
 
-    public static void glfwGetMonitorWorkarea(Monitor monitor, long xOut, long yOut, long wOut, long hOut) {
-        IMPL.glfwGetMonitorWorkarea(monitor, xOut,yOut,wOut, hOut);
+    public static void glfwGetMonitorWorkarea(final Monitor monitor, final long xOut, final long yOut, final long wOut, final long hOut) {
+        GLFW.IMPL.glfwGetMonitorWorkarea(monitor, xOut, yOut, wOut, hOut);
     }
 
-    public static void glfwGetMonitorPhysicalSize(Monitor monitor, long wOut, long hOut)  {
-        IMPL.glfwGetMonitorPhysicalSize(monitor, wOut, hOut);
+    public static void glfwGetMonitorPhysicalSize(final Monitor monitor, final long wOut, final long hOut) {
+        GLFW.IMPL.glfwGetMonitorPhysicalSize(monitor, wOut, hOut);
     }
 
-    public static void glfwGetMonitorContentScale(Monitor monitor, long xScaleOut, long yScaleOut) {
-         IMPL.glfwGetMonitorContentScale(monitor, xScaleOut,yScaleOut);
+    public static void glfwGetMonitorContentScale(final Monitor monitor, final long xScaleOut, final long yScaleOut) {
+        GLFW.IMPL.glfwGetMonitorContentScale(monitor, xScaleOut, yScaleOut);
     }
 
-    public static String glfwGetMonitorName(Monitor monitor) {
-        return IMPL.glfwGetMonitorName(monitor);
+    public static String glfwGetMonitorName(final Monitor monitor) {
+        return GLFW.IMPL.glfwGetMonitorName(monitor);
     }
 
-    public static void glfwSetMonitorUserPointer(Monitor monitor, MemoryAddress pointer) {
-        IMPL.glfwSetMonitorUserPointer(monitor, pointer);
+    public static void glfwSetMonitorUserPointer(final Monitor monitor, final MemoryAddress pointer) {
+        GLFW.IMPL.glfwSetMonitorUserPointer(monitor, pointer);
     }
 
-    public static MemoryAddress glfwGetMonitorUserPointer(Monitor monitor) {
-        return IMPL.glfwGetMonitorUserPointer(monitor);
+    public static MemoryAddress glfwGetMonitorUserPointer(final Monitor monitor) {
+        return GLFW.IMPL.glfwGetMonitorUserPointer(monitor);
     }
 
-    public static void glfwSetMonitorCallback(MonitorCallback cb) {
-        IMPL.glfwSetMonitorCallback(cb);
+    public static void glfwSetMonitorCallback(final MonitorCallback cb) {
+        GLFW.IMPL.glfwSetMonitorCallback(cb);
     }
 
-    public static VideoMode[] glfwGetVideoModes(Monitor monitor) {
-        return IMPL.glfwGetVideoModes(monitor);
+    public static VideoMode[] glfwGetVideoModes(final Monitor monitor) {
+        return GLFW.IMPL.glfwGetVideoModes(monitor);
     }
 
-    public static VideoMode glfwGetVideoMode(Monitor monitor) {
-        return IMPL.glfwGetVideoMode(monitor);
+    public static VideoMode glfwGetVideoMode(final Monitor monitor) {
+        return GLFW.IMPL.glfwGetVideoMode(monitor);
     }
 
-    public static void glfwSetGamma(Monitor monitor, float gamma) {
-        IMPL.glfwSetGamma(monitor,gamma);
+    public static void glfwSetGamma(final Monitor monitor, final float gamma) {
+        GLFW.IMPL.glfwSetGamma(monitor, gamma);
     }
 
-    public static GammaRamp glfwGetGammaRamp(Monitor monitor) {
-        return IMPL.glfwGetGammaRamp(monitor);
+    public static GammaRamp glfwGetGammaRamp(final Monitor monitor) {
+        return GLFW.IMPL.glfwGetGammaRamp(monitor);
     }
 
-    public static void glfwSetGammaRamp(Monitor monitor, GammaRamp ramp) {
-        IMPL.glfwSetGammaRamp(monitor, ramp);
+    public static void glfwSetGammaRamp(final Monitor monitor, final GammaRamp ramp) {
+        GLFW.IMPL.glfwSetGammaRamp(monitor, ramp);
     }
 
     public static void glfwDefaultWindowHints() {
-        IMPL.glfwDefaultWindowHints();
+        GLFW.IMPL.glfwDefaultWindowHints();
     }
 
-    public static void glfwWindowHint(int hint, int value) {
-        IMPL.glfwWindowHint(hint, value);
+    public static void glfwWindowHint(final int hint, final int value) {
+        GLFW.IMPL.glfwWindowHint(hint, value);
     }
 
-    public static void glfwWindowHintString(int hint, CharSequence value) {
-        IMPL.glfwWindowHintString(hint, value);
+    public static void glfwWindowHintString(final int hint, final CharSequence value) {
+        GLFW.IMPL.glfwWindowHintString(hint, value);
     }
 
-    public static Window glfwCreateWindow(int width, int height, CharSequence title, Monitor monitor, Window share) {
-        return IMPL.glfwCreateWindow(width, height, title, monitor, share);
+    public static Window glfwCreateWindow(final int width, final int height, final CharSequence title, final Monitor monitor, final Window share) {
+        return GLFW.IMPL.glfwCreateWindow(width, height, title, monitor, share);
     }
 
-    public static void glfwDestroyWindow(Window window) {
-        IMPL.glfwDestroyWindow(window);
+    public static void glfwDestroyWindow(final Window window) {
+        GLFW.IMPL.glfwDestroyWindow(window);
     }
 
-    public static boolean glfwWindowShouldClose(Window window) {
-        return IMPL.glfwWindowShouldClose(window);
+    public static boolean glfwWindowShouldClose(final Window window) {
+        return GLFW.IMPL.glfwWindowShouldClose(window);
     }
 
-    public static void glfwSetWindowShouldClose(Window window, boolean value) {
-        IMPL.glfwSetWindowShouldClose(window, value);
+    public static void glfwSetWindowShouldClose(final Window window, final boolean value) {
+        GLFW.IMPL.glfwSetWindowShouldClose(window, value);
     }
 
-    public static void glfwSetWindowTitle(Window window, CharSequence title) {
-        IMPL.glfwSetWindowTitle(window, title);
+    public static void glfwSetWindowTitle(final Window window, final CharSequence title) {
+        GLFW.IMPL.glfwSetWindowTitle(window, title);
     }
 
-    public static void glfwSetWindowIcon(Window window, MemorySegment images, int count) {
-        IMPL.glfwSetWindowIcon(window, images, count);
-    }
-    public static void glfwGetWindowPos(Window window, long xOut, long yOut) {
-        IMPL.glfwGetWindowPos(window, xOut, yOut);
+    public static void glfwSetWindowIcon(final Window window, final MemorySegment images, final int count) {
+        GLFW.IMPL.glfwSetWindowIcon(window, images, count);
     }
 
-    public static void glfwSetWindowPos(Window window, int x, int y) {
-        IMPL.glfwSetWindowPos(window, x, y);
-    }
-    public static void glfwGetWindowSize(Window window, long xOut, long yOut) {
-        IMPL.glfwGetWindowSize(window, xOut, yOut);
+    public static void glfwGetWindowPos(final Window window, final long xOut, final long yOut) {
+        GLFW.IMPL.glfwGetWindowPos(window, xOut, yOut);
     }
 
-    public static void glfwSetWindowSizeLimits(Window window, Int2 minSize, Int2 maxSize) {
-        IMPL.glfwSetWindowSizeLimits(window, minSize, maxSize);
+    public static void glfwSetWindowPos(final Window window, final int x, final int y) {
+        GLFW.IMPL.glfwSetWindowPos(window, x, y);
     }
 
-    public static void glfwSetWindowAspectRatio(Window window, int numer, int denom) {
-        IMPL.glfwSetWindowAspectRatio(window, numer, denom);
+    public static void glfwGetWindowSize(final Window window, final long xOut, final long yOut) {
+        GLFW.IMPL.glfwGetWindowSize(window, xOut, yOut);
     }
 
-    public static void glfwSetWindowSize(Window window, int width, int height) {
-        IMPL.glfwSetWindowSize(window, width, height);
+    public static void glfwSetWindowSizeLimits(final Window window, final Int2 minSize, final Int2 maxSize) {
+        GLFW.IMPL.glfwSetWindowSizeLimits(window, minSize, maxSize);
     }
 
-    public static void glfwGetFramebufferSize(Window window, long xOut, long yOut) {
-        IMPL.glfwGetFramebufferSize(window, xOut, yOut);
+    public static void glfwSetWindowAspectRatio(final Window window, final int numer, final int denom) {
+        GLFW.IMPL.glfwSetWindowAspectRatio(window, numer, denom);
     }
 
-    public static IntRectangle glfwGetWindowFrameRect(Window window) {
-        return IMPL.glfwGetWindowFrameRect(window);
+    public static void glfwSetWindowSize(final Window window, final int width, final int height) {
+        GLFW.IMPL.glfwSetWindowSize(window, width, height);
     }
 
-    public static void glfwGetWindowContentScale(Window window, long xScaleOut, long yScaleOut) {
-        IMPL.glfwGetWindowContentScale(window, xScaleOut, yScaleOut);
+    public static void glfwGetFramebufferSize(final Window window, final long xOut, final long yOut) {
+        GLFW.IMPL.glfwGetFramebufferSize(window, xOut, yOut);
     }
 
-    public static float glfwGetWindowOpacity(Window window) {
-        return IMPL.glfwGetWindowOpacity(window);
+    public static IntRectangle glfwGetWindowFrameRect(final Window window) {
+        return GLFW.IMPL.glfwGetWindowFrameRect(window);
     }
 
-    public static void glfwSetWindowOpacity(Window window, float opacity) {
-        IMPL.glfwSetWindowOpacity(window, opacity);
+    public static void glfwGetWindowContentScale(final Window window, final long xScaleOut, final long yScaleOut) {
+        GLFW.IMPL.glfwGetWindowContentScale(window, xScaleOut, yScaleOut);
     }
 
-    public static void glfwIconifyWindow(Window window) {
-        IMPL.glfwIconifyWindow(window);
+    public static float glfwGetWindowOpacity(final Window window) {
+        return GLFW.IMPL.glfwGetWindowOpacity(window);
     }
 
-    public static void glfwRestoreWindow(Window window) {
-        IMPL.glfwRestoreWindow(window);
+    public static void glfwSetWindowOpacity(final Window window, final float opacity) {
+        GLFW.IMPL.glfwSetWindowOpacity(window, opacity);
     }
 
-    public static void glfwMaximizeWindow(Window window) {
-        IMPL.glfwMaximizeWindow(window);
+    public static void glfwIconifyWindow(final Window window) {
+        GLFW.IMPL.glfwIconifyWindow(window);
     }
 
-    public static void glfwShowWindow(Window window) {
-        IMPL.glfwShowWindow(window);
+    public static void glfwRestoreWindow(final Window window) {
+        GLFW.IMPL.glfwRestoreWindow(window);
     }
 
-    public static void glfwHideWindow(Window window) {
-        IMPL.glfwHideWindow(window);
+    public static void glfwMaximizeWindow(final Window window) {
+        GLFW.IMPL.glfwMaximizeWindow(window);
     }
 
-    public static void glfwFocusWindow(Window window) {
-        IMPL.glfwFocusWindow(window);
+    public static void glfwShowWindow(final Window window) {
+        GLFW.IMPL.glfwShowWindow(window);
     }
 
-    public static void glfwRequestWindowAttention(Window window) {
-        IMPL.glfwRequestWindowAttention(window);
+    public static void glfwHideWindow(final Window window) {
+        GLFW.IMPL.glfwHideWindow(window);
     }
 
-    public static Monitor glfwGetWindowMonitor(Window window) {
-        return IMPL.glfwGetWindowMonitor(window);
+    public static void glfwFocusWindow(final Window window) {
+        GLFW.IMPL.glfwFocusWindow(window);
     }
 
-    public static void glfwSetWindowMonitor(Window window, Monitor monitor, int x, int y, int width, int height, int refreshRate) {
-        IMPL.glfwSetWindowMonitor(window, monitor, x, y, width, height, refreshRate);
+    public static void glfwRequestWindowAttention(final Window window) {
+        GLFW.IMPL.glfwRequestWindowAttention(window);
     }
 
-    public static int glfwGetWindowAttrib(Window window, int attrib) {
-        return IMPL.glfwGetWindowAttrib(window,attrib);
+    public static Monitor glfwGetWindowMonitor(final Window window) {
+        return GLFW.IMPL.glfwGetWindowMonitor(window);
     }
 
-    public static void glfwSetWindowAttrib(Window window, int attrib, int value) {
-        IMPL.glfwSetWindowAttrib(window, attrib, value);
+    public static void glfwSetWindowMonitor(final Window window, final Monitor monitor, final int x, final int y, final int width, final int height, final int refreshRate) {
+        GLFW.IMPL.glfwSetWindowMonitor(window, monitor, x, y, width, height, refreshRate);
     }
 
-    public static void glfwSetWindowUserPointer(Window window, MemoryAddress pointer) {
-        IMPL.glfwSetWindowUserPointer(window, pointer);
+    public static int glfwGetWindowAttrib(final Window window, final int attrib) {
+        return GLFW.IMPL.glfwGetWindowAttrib(window, attrib);
     }
 
-    public static MemoryAddress glfwGetWindowUserPointer(Window window) {
-        return IMPL.glfwGetWindowUserPointer(window);
+    public static void glfwSetWindowAttrib(final Window window, final int attrib, final int value) {
+        GLFW.IMPL.glfwSetWindowAttrib(window, attrib, value);
     }
 
-    public static void glfwSetWindowPosCallback(Window window, WindowPosCallback cb) {
-        IMPL.glfwSetWindowPosCallback(window,cb);
+    public static void glfwSetWindowUserPointer(final Window window, final MemoryAddress pointer) {
+        GLFW.IMPL.glfwSetWindowUserPointer(window, pointer);
     }
 
-    public static void glfwSetWindowSizeCallback(Window window, WindowSizeCallback cb) {
-        IMPL.glfwSetWindowSizeCallback(window,cb);
+    public static MemoryAddress glfwGetWindowUserPointer(final Window window) {
+        return GLFW.IMPL.glfwGetWindowUserPointer(window);
     }
 
-    public static void glfwSetWindowCloseCallback(Window window, WindowCloseCallback cb) {
-        IMPL.glfwSetWindowCloseCallback(window, cb);
+    public static void glfwSetWindowPosCallback(final Window window, final WindowPosCallback cb) {
+        GLFW.IMPL.glfwSetWindowPosCallback(window, cb);
     }
 
-    public static void glfwSetWindowRefreshCallback(Window window, WindowRefreshCallback cb) {
-        IMPL.glfwSetWindowRefreshCallback(window,cb);
+    public static void glfwSetWindowSizeCallback(final Window window, final WindowSizeCallback cb) {
+        GLFW.IMPL.glfwSetWindowSizeCallback(window, cb);
     }
 
-    public static void glfwSetWindowFocusCallback(Window window, WindowFocusCallback cb) {
-        IMPL.glfwSetWindowFocusCallback(window,cb);
+    public static void glfwSetWindowCloseCallback(final Window window, final WindowCloseCallback cb) {
+        GLFW.IMPL.glfwSetWindowCloseCallback(window, cb);
     }
 
-    public static void glfwSetWindowIconifyCallback(Window window, WindowIconifyCallback cb) {
-        IMPL.glfwSetWindowIconifyCallback(window, cb);
+    public static void glfwSetWindowRefreshCallback(final Window window, final WindowRefreshCallback cb) {
+        GLFW.IMPL.glfwSetWindowRefreshCallback(window, cb);
     }
 
-    public static void glfwSetWindowMaximizeCallback(Window window,   WindowMaximizeCallback cb) {
-        IMPL.glfwSetWindowMaximizeCallback(window, cb);
+    public static void glfwSetWindowFocusCallback(final Window window, final WindowFocusCallback cb) {
+        GLFW.IMPL.glfwSetWindowFocusCallback(window, cb);
     }
 
-    public static void glfwSetFramebufferSizeCallback(Window window,  FramebufferSizeCallback cb) {
-        IMPL.glfwSetFramebufferSizeCallback(window, cb);
+    public static void glfwSetWindowIconifyCallback(final Window window, final WindowIconifyCallback cb) {
+        GLFW.IMPL.glfwSetWindowIconifyCallback(window, cb);
     }
 
-    public static void glfwSetWindowContentScaleCallback(Window window,  WindowContentScaleCallback cb) {
-        IMPL.glfwSetWindowContentScaleCallback(window, cb);
+    public static void glfwSetWindowMaximizeCallback(final Window window, final WindowMaximizeCallback cb) {
+        GLFW.IMPL.glfwSetWindowMaximizeCallback(window, cb);
+    }
+
+    public static void glfwSetFramebufferSizeCallback(final Window window, final FramebufferSizeCallback cb) {
+        GLFW.IMPL.glfwSetFramebufferSizeCallback(window, cb);
+    }
+
+    public static void glfwSetWindowContentScaleCallback(final Window window, final WindowContentScaleCallback cb) {
+        GLFW.IMPL.glfwSetWindowContentScaleCallback(window, cb);
     }
 
     public static void glfwPollEvents() {
-        IMPL.glfwPollEvents();
+        GLFW.IMPL.glfwPollEvents();
     }
 
     public static void glfwWaitEvents() {
-        IMPL.glfwWaitEvents();
+        GLFW.IMPL.glfwWaitEvents();
     }
 
-    public static void glfwWaitEventsTimeout(double timeout) {
-        IMPL.glfwWaitEventsTimeout(timeout);
+    public static void glfwWaitEventsTimeout(final double timeout) {
+        GLFW.IMPL.glfwWaitEventsTimeout(timeout);
     }
 
     public static void glfwPostEmptyEvent() {
-        IMPL.glfwPostEmptyEvent();
+        GLFW.IMPL.glfwPostEmptyEvent();
     }
 
-    public static int glfwGetInputMode(Window window, int mode) {
-        return IMPL.glfwGetInputMode(window, mode);
+    public static int glfwGetInputMode(final Window window, final int mode) {
+        return GLFW.IMPL.glfwGetInputMode(window, mode);
     }
 
-    public static void glfwSetInputMode(Window window, int mode, int value) {
-        IMPL.glfwSetInputMode(window, mode, value);
+    public static void glfwSetInputMode(final Window window, final int mode, final int value) {
+        GLFW.IMPL.glfwSetInputMode(window, mode, value);
     }
 
     public static boolean glfwRawMouseMotionSupported() {
-        return IMPL.glfwRawMouseMotionSupported();
+        return GLFW.IMPL.glfwRawMouseMotionSupported();
     }
 
-    public static String glfwGetKeyName(int key, int scancode) {
-        return IMPL.glfwGetKeyName(key, scancode);
+    public static String glfwGetKeyName(final int key, final int scancode) {
+        return GLFW.IMPL.glfwGetKeyName(key, scancode);
     }
 
-    public static int glfwGetKeyScancode(int key) {
-        return IMPL.glfwGetKeyScancode(key);
+    public static int glfwGetKeyScancode(final int key) {
+        return GLFW.IMPL.glfwGetKeyScancode(key);
     }
 
-    public static int glfwGetKey(Window window, int key) {
-        return IMPL.glfwGetKey(window, key);
+    public static int glfwGetKey(final Window window, final int key) {
+        return GLFW.IMPL.glfwGetKey(window, key);
     }
 
-    public static int glfwGetMouseButton(Window window, int button) {
-        return IMPL.glfwGetMouseButton(window, button);
+    public static int glfwGetMouseButton(final Window window, final int button) {
+        return GLFW.IMPL.glfwGetMouseButton(window, button);
     }
 
-    public static Double2 glfwGetCursorPos(Window window) {
-        return IMPL.glfwGetCursorPos(window);
+    public static Double2 glfwGetCursorPos(final Window window) {
+        return GLFW.IMPL.glfwGetCursorPos(window);
     }
 
-    public static void glfwSetCursorPos(Window window, double x, double y) {
-        IMPL.glfwSetCursorPos(window, x, y);
-    }
-    public static Cursor glfwCreateCursor(MemorySegment image, int xHot, int yHot) {
-        return IMPL.glfwCreateCursor(image, xHot, yHot);
+    public static void glfwSetCursorPos(final Window window, final double x, final double y) {
+        GLFW.IMPL.glfwSetCursorPos(window, x, y);
     }
 
-    public static Cursor glfwCreateStandardCursor(int shape) {
-        return IMPL.glfwCreateStandardCursor(shape);
+    public static Cursor glfwCreateCursor(final MemorySegment image, final int xHot, final int yHot) {
+        return GLFW.IMPL.glfwCreateCursor(image, xHot, yHot);
     }
 
-    public static void glfwDestroyCursor(Cursor cursor) {
-        IMPL.glfwDestroyCursor(cursor);
+    public static Cursor glfwCreateStandardCursor(final int shape) {
+        return GLFW.IMPL.glfwCreateStandardCursor(shape);
     }
 
-    public static void glfwSetCursor(Window window, Cursor cursor) {
-        IMPL.glfwSetCursor(window, cursor);
+    public static void glfwDestroyCursor(final Cursor cursor) {
+        GLFW.IMPL.glfwDestroyCursor(cursor);
     }
 
-    public static void glfwSetKeyCallback(Window window,  KeyCallback cb) {
-        IMPL.glfwSetKeyCallback(window,cb);
+    public static void glfwSetCursor(final Window window, final Cursor cursor) {
+        GLFW.IMPL.glfwSetCursor(window, cursor);
     }
 
-    public static void glfwSetCharCallback(Window window,  CharCallback cb) {
-        IMPL.glfwSetCharCallback(window, cb);
+    public static void glfwSetKeyCallback(final Window window, final KeyCallback cb) {
+        GLFW.IMPL.glfwSetKeyCallback(window, cb);
     }
 
-    public static void glfwSetCharModsCallback(Window window, CharModsCallback cb) {
-        IMPL.glfwSetCharModsCallback(window, cb);
+    public static void glfwSetCharCallback(final Window window, final CharCallback cb) {
+        GLFW.IMPL.glfwSetCharCallback(window, cb);
     }
 
-    public static void glfwSetMouseButtonCallback(Window window,  MouseButtonCallback cb) {
-        IMPL.glfwSetMouseButtonCallback(window, cb);
+    public static void glfwSetCharModsCallback(final Window window, final CharModsCallback cb) {
+        GLFW.IMPL.glfwSetCharModsCallback(window, cb);
+    }
+
+    public static void glfwSetMouseButtonCallback(final Window window, final MouseButtonCallback cb) {
+        GLFW.IMPL.glfwSetMouseButtonCallback(window, cb);
     }
 
 
-    public static void glfwSetCursorPosCallback(Window window, CursorPosCallback cb) {
-        IMPL.glfwSetCursorPosCallback(window, cb);
+    public static void glfwSetCursorPosCallback(final Window window, final CursorPosCallback cb) {
+        GLFW.IMPL.glfwSetCursorPosCallback(window, cb);
     }
 
-    public static void glfwSetCursorEnterCallback(Window window,  CursorEnterCallback cb) {
-        IMPL.glfwSetCursorEnterCallback(window, cb);
+    public static void glfwSetCursorEnterCallback(final Window window, final CursorEnterCallback cb) {
+        GLFW.IMPL.glfwSetCursorEnterCallback(window, cb);
     }
 
-    public static void glfwSetScrollCallback(Window window,  ScrollCallback cb) {
-        IMPL.glfwSetScrollCallback(window, cb);
+    public static void glfwSetScrollCallback(final Window window, final ScrollCallback cb) {
+        GLFW.IMPL.glfwSetScrollCallback(window, cb);
     }
 
-    public static void glfwSetDropCallback(Window window,  DropCallback cb) {
-        IMPL.glfwSetDropCallback(window, cb);
+    public static void glfwSetDropCallback(final Window window, final DropCallback cb) {
+        GLFW.IMPL.glfwSetDropCallback(window, cb);
     }
 
-    public static boolean glfwJoystickPresent(int jid) {
-        return IMPL.glfwJoystickPresent(jid);
+    public static boolean glfwJoystickPresent(final int jid) {
+        return GLFW.IMPL.glfwJoystickPresent(jid);
     }
 
-    public static FloatBuffer glfwGetJoystickAxes(int jid) {
-        return IMPL.glfwGetJoystickAxes(jid);
+    public static FloatBuffer glfwGetJoystickAxes(final int jid) {
+        return GLFW.IMPL.glfwGetJoystickAxes(jid);
     }
 
-    public static ByteBuffer glfwGetJoystickButtons(int jid) {
-        return IMPL.glfwGetJoystickButtons(jid);
+    public static ByteBuffer glfwGetJoystickButtons(final int jid) {
+        return GLFW.IMPL.glfwGetJoystickButtons(jid);
     }
 
-    public static ByteBuffer glfwGetJoystickHats(int jid) {
-        return IMPL.glfwGetJoystickHats(jid);
+    public static ByteBuffer glfwGetJoystickHats(final int jid) {
+        return GLFW.IMPL.glfwGetJoystickHats(jid);
     }
 
-    public static String glfwGetJoystickName(int jid) {
-        return IMPL.glfwGetJoystickName(jid);
+    public static String glfwGetJoystickName(final int jid) {
+        return GLFW.IMPL.glfwGetJoystickName(jid);
     }
 
-    public static String glfwGetJoystickGUID(int jid) {
-        return IMPL.glfwGetJoystickGUID(jid);
+    public static String glfwGetJoystickGUID(final int jid) {
+        return GLFW.IMPL.glfwGetJoystickGUID(jid);
     }
 
-    public static void glfwSetJoystickUserPointer(int jid, MemoryAddress pointer) {
-        IMPL.glfwSetJoystickUserPointer(jid, pointer);
+    public static void glfwSetJoystickUserPointer(final int jid, final MemoryAddress pointer) {
+        GLFW.IMPL.glfwSetJoystickUserPointer(jid, pointer);
     }
 
-    public static MemoryAddress glfwGetJoystickUserPointer(int jid) {
-        return IMPL.glfwGetJoystickUserPointer(jid);
+    public static MemoryAddress glfwGetJoystickUserPointer(final int jid) {
+        return GLFW.IMPL.glfwGetJoystickUserPointer(jid);
     }
 
-    public static boolean glfwJoystickIsGamepad(int jid) {
-        return IMPL.glfwJoystickIsGamepad(jid);
+    public static boolean glfwJoystickIsGamepad(final int jid) {
+        return GLFW.IMPL.glfwJoystickIsGamepad(jid);
     }
 
-    public static void glfwSetJoystickCallback(JoystickCallback cb) {
-        IMPL.glfwSetJoystickCallback(cb);
+    public static void glfwSetJoystickCallback(final JoystickCallback cb) {
+        GLFW.IMPL.glfwSetJoystickCallback(cb);
     }
 
-    public static boolean glfwUpdateGamepadMappings(MemoryAddress string) {
-        return IMPL.glfwUpdateGamepadMappings(string);
-    }
-    public static String glfwGetGamepadName(int jid) {
-        return IMPL.glfwGetGamepadName(jid);
+    public static boolean glfwUpdateGamepadMappings(final MemoryAddress string) {
+        return GLFW.IMPL.glfwUpdateGamepadMappings(string);
     }
 
-    public static boolean glfwGetGamepadState(int jid, GamepadState state) {
-        return IMPL.glfwGetGamepadState(jid, state);
+    public static String glfwGetGamepadName(final int jid) {
+        return GLFW.IMPL.glfwGetGamepadName(jid);
     }
 
-    public static void glfwSetClipboardString(Window window, CharSequence string) {
-        IMPL.glfwSetClipboardString(window, string);
+    public static boolean glfwGetGamepadState(final int jid, final GamepadState state) {
+        return GLFW.IMPL.glfwGetGamepadState(jid, state);
     }
 
-    public static String glfwGetClipboardString(Window window) {
-        return IMPL.glfwGetClipboardString(window);
+    public static void glfwSetClipboardString(final Window window, final CharSequence string) {
+        GLFW.IMPL.glfwSetClipboardString(window, string);
+    }
+
+    public static String glfwGetClipboardString(final Window window) {
+        return GLFW.IMPL.glfwGetClipboardString(window);
     }
 
     public static double glfwGetTime() {
-        return IMPL.glfwGetTime();
+        return GLFW.IMPL.glfwGetTime();
     }
 
-    public static void glfwSetTime(double time) {
-        IMPL.glfwSetTime(time);
+    public static void glfwSetTime(final double time) {
+        GLFW.IMPL.glfwSetTime(time);
     }
 
     public static long glfwGetTimerValue() {
-        return IMPL.glfwGetTimerValue();
+        return GLFW.IMPL.glfwGetTimerValue();
     }
 
     public static long glfwGetTimerFrequency() {
-        return IMPL.glfwGetTimerFrequency();
+        return GLFW.IMPL.glfwGetTimerFrequency();
     }
 
-    public static void glfwMakeContextCurrent(Window window) {
-        IMPL.glfwMakeContextCurrent(window);
+    public static void glfwMakeContextCurrent(final Window window) {
+        GLFW.IMPL.glfwMakeContextCurrent(window);
     }
 
     public static Window glfwGetCurrentContext() {
-        return IMPL.glfwGetCurrentContext();
+        return GLFW.IMPL.glfwGetCurrentContext();
     }
 
-    public static void glfwSwapBuffers(Window window) {
-        IMPL.glfwSwapBuffers(window);
+    public static void glfwSwapBuffers(final Window window) {
+        GLFW.IMPL.glfwSwapBuffers(window);
     }
 
-    public static void glfwSwapInterval(int interval) {
-        IMPL.glfwSwapInterval(interval);
+    public static void glfwSwapInterval(final int interval) {
+        GLFW.IMPL.glfwSwapInterval(interval);
     }
 
-    public static boolean glfwExtensionSupported(CharSequence extension) {
-        return IMPL.glfwExtensionSupported(extension);
+    public static boolean glfwExtensionSupported(final CharSequence extension) {
+        return GLFW.IMPL.glfwExtensionSupported(extension);
     }
 
-    public static MemoryAddress glfwGetProcAddress(CharSequence procName) {
-        return IMPL.glfwGetProcAddress(procName);
+    public static MemoryAddress glfwGetProcAddress(final CharSequence procName) {
+        return GLFW.IMPL.glfwGetProcAddress(procName);
     }
 
 }

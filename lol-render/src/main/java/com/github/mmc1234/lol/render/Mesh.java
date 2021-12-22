@@ -24,51 +24,53 @@ public class Mesh {
     List<VertexAttrib> descriptionList;
     MemorySegment indices;
 
-    public Mesh(final List<VertexAttrib> list) {
-        this.descriptionList = list;
-        this.memorySegments = new MemorySegment[this.descriptionList.size()];
+    public Mesh(List<VertexAttrib> list) {
+        descriptionList = list;
+        memorySegments = new MemorySegment[descriptionList.size()];
     }
 
     private MemorySegment[] memorySegments;
-    public static final Mesh create(final List<VertexAttrib> list) {
+
+    public static final Mesh create(List<VertexAttrib> list) {
         return new Mesh(list);
     }
 
     public MemorySegment getIndices() {
-        return this.indices;
+        return indices;
     }
 
-    public void setIndices(final MemorySegment indices) {
+    public void setIndices(MemorySegment indices) {
         this.indices = indices;
     }
 
-    public void setData(final int index, final MemorySegment memorySegment) {
-        this.memorySegments[index] = memorySegment;
+    public void setData(int index, MemorySegment memorySegment) {
+        memorySegments[index] = memorySegment;
     }
 
-    public MemorySegment getMemorySegment(final int index) {
-        return this.memorySegments[index];
+    public MemorySegment getMemorySegment(int index) {
+        return memorySegments[index];
     }
+
     public int size() {
-        return this.memorySegments.length;
+        return memorySegments.length;
     }
 
     @Override
     public String toString() {
         return "Mesh{" +
-                "descriptionList=" + this.descriptionList +
+                "descriptionList=" + descriptionList +
                 '}';
     }
 
     public void close() {
-        if(this.memorySegments.length > 0) {
-            for(int i = 0; i< this.size(); i++) {
-                this.memorySegments[i] = null;
+        if (memorySegments.length > 0) {
+            for (int i = 0; i < size(); i++) {
+                memorySegments[i] = null;
             }
-            this.memorySegments = new MemorySegment[0];
+            memorySegments = new MemorySegment[0];
         }
-        if(this.indices != null) {
-            this.indices = null;
+        if (indices != null) {
+            indices = null;
         }
     }
 }

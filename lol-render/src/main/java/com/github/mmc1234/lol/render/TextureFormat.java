@@ -20,12 +20,14 @@ import org.lwjgl.opengl.*;
 
 public enum TextureFormat {
     R8G8B8A8_UINT, A8_UINT;
+
     public int toInt() {
         return switch (this) {
             case R8G8B8A8_UINT -> GL11.GL_RGBA;
             case A8_UINT -> GL11.GL_ALPHA;
         };
     }
+
     public int toTypeInt() {
         return switch (this) {
             case R8G8B8A8_UINT, A8_UINT -> GL11.GL_UNSIGNED_BYTE;

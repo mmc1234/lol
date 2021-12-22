@@ -28,45 +28,45 @@ public class Render {
     private static boolean isStop;
 
     public static void initRenderThread() {
-        Preconditions.checkState(Render.renderThread == null, "Could not initialize render thread");
-        Render.renderThread = Thread.currentThread();
-        Render.isStop = false;
+        Preconditions.checkState(renderThread == null, "Could not initialize render thread");
+        renderThread = Thread.currentThread();
+        isStop = false;
     }
 
     public static void assertRenderThread() {
-        if(!Render.isRenderThread()) throw Render.constructThreadException();
+        if (!isRenderThread()) throw constructThreadException();
     }
 
     private static IllegalStateException constructThreadException() {
         return new IllegalStateException("Render called from wrong thread");
     }
 
-    public static void recordRenderCall(final RenderCall renderCall) {
-        Render.recordingQueue.offer(renderCall);
+    public static void recordRenderCall(RenderCall renderCall) {
+        recordingQueue.offer(renderCall);
     }
 
     public static boolean isRenderThread() {
-        return Thread.currentThread() == Render.renderThread;
+        return Thread.currentThread() == renderThread;
     }
 
     public static boolean isEmptyRecordingQueue() {
-        return Render.recordingQueue.isEmpty();
+        return recordingQueue.isEmpty();
     }
 
     public static void replayQueue() {
-        Render.assertRenderThread();
-        Render.isReplayingQueue = true;
+        assertRenderThread();
+        isReplayingQueue = true;
 
-        while (!Render.recordingQueue.isEmpty() && !Render.isStop) {
-            final RenderCall renderCall = Render.recordingQueue.poll();
+        while (!recordingQueue.isEmpty() && !isStop) {
+            RenderCall renderCall = recordingQueue.poll();
             renderCall.execute();
         }
 
-        Render.isReplayingQueue = false;
+        isReplayingQueue = false;
     }
 
     public static void makeShouldStop() {
-        Render.assertRenderThread();
-        isStop = true;
+        assertRenderThread();
+        Render.isStop = true;
     }
 }

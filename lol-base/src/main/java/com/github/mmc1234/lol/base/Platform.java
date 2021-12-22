@@ -24,17 +24,17 @@ public enum Platform {
     private static Platform current;
     private final String name;
 
-    Platform(String name) {
+    Platform(final String name) {
         this.name = name;
     }
 
     public static Platform get() {
-        return current;
+        return Platform.current;
     }
 
-    public static void start(Thread thread) {
+    public static void start(final Thread thread) {
         if (thread != null && thread.isAlive()) return;
-        if (Platform.MACOSX.equals(Platform.get())) {
+        if (MACOSX.equals(get())) {
             thread.run();
         } else {
             thread.start();
@@ -42,20 +42,20 @@ public enum Platform {
     }
 
     public boolean isCurrent() {
-        return get() == this;
+        return Platform.get() == this;
     }
 
     static {
-        String osName = System.getProperty("os.name");
+        final String osName = System.getProperty("os.name");
         if (osName.startsWith("Windows")) {
-            current = WINDOWS;
+            Platform.current = Platform.WINDOWS;
         } else if (!osName.startsWith("Linux") && !osName.startsWith("FreeBSD") && !osName.startsWith("SunOS") && !osName.startsWith("Unix")) {
             if (!osName.startsWith("Mac OS X") && !osName.startsWith("Darwin")) {
                 throw new LinkageError("Unknown platform: " + osName);
             }
-            current = MACOSX;
+            Platform.current = Platform.MACOSX;
         } else {
-            current = LINUX;
+            Platform.current = Platform.LINUX;
         }
     }
 }

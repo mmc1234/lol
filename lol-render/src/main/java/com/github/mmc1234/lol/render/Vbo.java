@@ -27,60 +27,63 @@ public class Vbo {
     int index;
     VertexAttrib description;
     int draw = GL15.GL_STATIC_DRAW;
-    public Vbo(final int index, final VertexAttrib description) {
+
+    public Vbo(int index, VertexAttrib description) {
         this.index = index;
         this.description = description;
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public void init() {
-        if(this.id == 0 && Render.isRenderThread()) {
-            this.id = glGenBuffers();
-            Preconditions.checkState(this.id !=0);
-            this.bind();
-            glVertexAttribPointer(this.index, this.description.size(), this.description.format().toInt(), this.description.format().isNorm(), 0, 0);
-            glEnableVertexAttribArray(this.index);
+        if (id == 0 && Render.isRenderThread()) {
+            id = glGenBuffers();
+            Preconditions.checkState(id != 0);
+            bind();
+            glVertexAttribPointer(index, description.size(), description.format().toInt(), description.format().isNorm(), 0, 0);
+            glEnableVertexAttribArray(index);
         }
     }
 
     public void bind() {
-        if(this.id != 0 && Render.isRenderThread()) {
-            glBindBuffer(GL_ARRAY_BUFFER, this.id);
+        if (id != 0 && Render.isRenderThread()) {
+            glBindBuffer(GL_ARRAY_BUFFER, id);
         }
     }
 
     public static void bindZero() {
-        if(Render.isRenderThread()) {
+        if (Render.isRenderThread()) {
             glBindBuffer(GL_ARRAY_BUFFER, 0);
         }
     }
 
     public void close() {
-        if(this.id != 0 && Render.isRenderThread()) {
-            glDeleteBuffers(this.id);
-            this.id = 0;
+        if (id != 0 && Render.isRenderThread()) {
+            glDeleteBuffers(id);
+            id = 0;
         }
     }
 
-    public void reload(final Mesh mesh) {
-        this.reload(mesh.getMemorySegment(this.index));
+    public void reload(Mesh mesh) {
+        reload(mesh.getMemorySegment(index));
     }
-    public void reload(final int vertexCount) {
+
+    public void reload(int vertexCount) {
     }
-    public void reload(final MemorySegment memorySegment) {
-        if(this.id != 0 && Render.isRenderThread()) {
-            GL15.nglBufferData(GL15.GL_ARRAY_BUFFER, memorySegment.byteSize(), memorySegment.address().toRawLongValue(), this.getDraw());
+
+    public void reload(MemorySegment memorySegment) {
+        if (id != 0 && Render.isRenderThread()) {
+            GL15.nglBufferData(GL15.GL_ARRAY_BUFFER, memorySegment.byteSize(), memorySegment.address().toRawLongValue(), getDraw());
         }
     }
 
     public int getDraw() {
-        return this.draw;
+        return draw;
     }
 
-    public void setDraw(final int draw) {
+    public void setDraw(int draw) {
         this.draw = draw;
     }
 }

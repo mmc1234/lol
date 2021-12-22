@@ -27,12 +27,12 @@ public final class ShaderProgram {
     private final String fragmentSource;
     private final Object2IntMap<String> uniformMap = new Object2IntArrayMap<>();
 
-    private ShaderProgram(final String vertexSource, final String fragmentSource) {
+    private ShaderProgram(String vertexSource, String fragmentSource) {
         this.vertexSource = vertexSource;
         this.fragmentSource = fragmentSource;
     }
 
-    public static ShaderProgram newInstance(final String vertexSource, final String fragmentSource) {
+    public static ShaderProgram newInstance(String vertexSource, String fragmentSource) {
         return new ShaderProgram(vertexSource, fragmentSource);
     }
 
@@ -43,66 +43,66 @@ public final class ShaderProgram {
 
     public void close() {
         Render.assertRenderThread();
-        if (this.id != 0) {
-            GL20.glDeleteProgram(this.id);
-            this.id = 0;
+        if (id != 0) {
+            GL20.glDeleteProgram(id);
+            id = 0;
         }
     }
 
-    public void createUniform(final String uniformName) {
+    public void createUniform(String uniformName) {
         Render.assertRenderThread();
-        final int uniformLocation = glGetUniformLocation(this.id, uniformName);
+        int uniformLocation = glGetUniformLocation(id, uniformName);
         if (uniformLocation < 0) {
             throw new IllegalStateException("Could not find uniform:" + uniformName);
         }
-        this.uniformMap.put(uniformName, uniformLocation);
+        uniformMap.put(uniformName, uniformLocation);
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
-    public int getUniformLocation(final String name) {
-        return this.uniformMap.getOrDefault(name, -1);
+    public int getUniformLocation(String name) {
+        return uniformMap.getOrDefault(name, -1);
     }
 
     public void init() {
         Render.assertRenderThread();
-        this.id = GL20.glCreateProgram();
+        id = GL20.glCreateProgram();
 
-        final int vs = GL20.glCreateShader(GL20.GL_VERTEX_SHADER);
-        final int fs = GL20.glCreateShader(GL20.GL_FRAGMENT_SHADER);
+        int vs = GL20.glCreateShader(GL20.GL_VERTEX_SHADER);
+        int fs = GL20.glCreateShader(GL20.GL_FRAGMENT_SHADER);
 
-        GL20.glShaderSource(vs, this.vertexSource);
-        GL20.glShaderSource(fs, this.fragmentSource);
+        GL20.glShaderSource(vs, vertexSource);
+        GL20.glShaderSource(fs, fragmentSource);
         GL20.glCompileShader(fs);
         GL20.glCompileShader(vs);
-        GL20.glAttachShader(this.id, vs);
-        GL20.glAttachShader(this.id, fs);
+        GL20.glAttachShader(id, vs);
+        GL20.glAttachShader(id, fs);
 
-        GL20.glLinkProgram(this.id);
-        if (GL20.glGetProgrami(this.id, GL20.GL_LINK_STATUS) == GL11.GL_FALSE) {
-            System.out.println("(\n" + GL20.glGetProgramInfoLog(this.id) + "\n)");
+        GL20.glLinkProgram(id);
+        if (GL20.glGetProgrami(id, GL20.GL_LINK_STATUS) == GL11.GL_FALSE) {
+            System.out.println("(\n" + GL20.glGetProgramInfoLog(id) + "\n)");
         }
-        GL20.glValidateProgram(this.id);
+        GL20.glValidateProgram(id);
 
         GL20.glDeleteShader(vs);
         GL20.glDeleteShader(fs);
     }
 
-    public void tryCreateUniform(final String uniformName) {
+    public void tryCreateUniform(String uniformName) {
         if (Render.isRenderThread()) {
-            final int uniformLocation = glGetUniformLocation(this.id, uniformName);
+            int uniformLocation = glGetUniformLocation(id, uniformName);
             if (uniformLocation >= 0) {
-                this.uniformMap.put(uniformName, uniformLocation);
+                uniformMap.put(uniformName, uniformLocation);
             }
         }
     }
 
     public void use() {
         Render.assertRenderThread();
-        if (this.id != 0) {
-            GL20.glUseProgram(this.id);
+        if (id != 0) {
+            GL20.glUseProgram(id);
         }
     }
 

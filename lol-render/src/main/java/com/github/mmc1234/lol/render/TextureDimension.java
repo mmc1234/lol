@@ -20,6 +20,7 @@ import org.lwjgl.opengl.*;
 
 public enum TextureDimension {
     TEX2D, TEX3D, CUBE, TEX2D_ARRAY;
+
     public int toInt() {
         return switch (this) {
             case TEX2D -> GL11.GL_TEXTURE_2D;

@@ -27,81 +27,81 @@ public abstract class AbstractTexture {
     protected TextureDimension dimension;
     protected String name;
 
-    public void setMinFilter(final TextureFilterMode minFilter) {
+    public void setMinFilter(TextureFilterMode minFilter) {
         this.minFilter = minFilter;
     }
 
-    public void setMagFilter(final TextureFilterMode magFilter) {
+    public void setMagFilter(TextureFilterMode magFilter) {
         this.magFilter = magFilter;
     }
 
     public abstract void close();
 
     public int getDepth() {
-        return this.depth;
+        return depth;
     }
 
     public TextureDimension getDimension() {
-        return this.dimension;
+        return dimension;
     }
 
     public TextureFormat getFormat() {
-        return this.format;
+        return format;
     }
 
     public int getHeight() {
-        return this.height;
+        return height;
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public TextureFormat getInternalFormat() {
-        return this.internalFormat;
+        return internalFormat;
     }
 
     public TextureFilterMode getMagFilter() {
-        return this.magFilter;
+        return magFilter;
     }
 
     public TextureFilterMode getMinFilter() {
-        return this.minFilter;
+        return minFilter;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
-    public void setName(final String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
     public TextureWarpMode getWarpModeU() {
-        return this.warpModeU;
+        return warpModeU;
     }
 
     public TextureWarpMode getWarpModeV() {
-        return this.warpModeV;
+        return warpModeV;
     }
 
     public TextureWarpMode getWarpModeW() {
-        return this.warpModeW;
+        return warpModeW;
     }
 
     public int getWidth() {
-        return this.width;
+        return width;
     }
 
     public abstract void init();
 
     public void bind() {
         Render.assertRenderThread();
-        GL11.glBindTexture(this.dimension.toInt(), this.getId());
+        GL11.glBindTexture(dimension.toInt(), getId());
     }
 
     @Override
     public String toString() {
-        return "Texture(" + this.name + "=" + this.id + ")";
+        return "Texture(" + name + "=" + id + ")";
     }
 }

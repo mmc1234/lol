@@ -23,10 +23,9 @@ public interface Ref<T> extends Supplier<T> {
 
     T get();
 
-    static <T> Ref<T> newRef(T t) {
+    static <T> Ref<T> newRef(final T t) {
         return new ObjRef<>(t);
     }
-    
-    
+
 
 }

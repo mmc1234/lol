@@ -19,33 +19,37 @@ package com.github.mmc1234.lol.render;
 import jdk.incubator.foreign.*;
 
 public class MemorySegmentUtil {
-    public static MemorySegment createFromFloatArray(final float... array) {
-        final MemorySegment memorySegment = MemorySegment.allocateNative(
-                MemoryLayouts.JAVA_FLOAT.byteSize()*array.length, ResourceScope.globalScope());
-        for(int i = 0; i<array.length; i++) {
-            MemoryAccess.setFloatAtIndex(memorySegment,i, array[i]);
+    public static MemorySegment createFromFloatArray(float... array) {
+        MemorySegment memorySegment = MemorySegment.allocateNative(
+                MemoryLayouts.JAVA_FLOAT.byteSize() * array.length, ResourceScope.globalScope());
+        for (int i = 0; i < array.length; i++) {
+            MemoryAccess.setFloatAtIndex(memorySegment, i, array[i]);
         }
         return memorySegment;
     }
-    public static MemorySegment createFromIntArray(final int... array) {
-        return MemorySegmentUtil.createFromIntArray(ResourceScope.globalScope(), array);
+
+    public static MemorySegment createFromIntArray(int... array) {
+        return createFromIntArray(ResourceScope.globalScope(), array);
     }
-    public static MemorySegment createFromIntArray(final ResourceScope resourceScope, final int... array) {
-        final MemorySegment memorySegment = MemorySegment.allocateNative(
-                MemoryLayouts.JAVA_INT.byteSize()*array.length, resourceScope);
-        for(int i = 0; i<array.length; i++) {
-            MemoryAccess.setIntAtIndex(memorySegment,i, array[i]);
+
+    public static MemorySegment createFromIntArray(ResourceScope resourceScope, int... array) {
+        MemorySegment memorySegment = MemorySegment.allocateNative(
+                MemoryLayouts.JAVA_INT.byteSize() * array.length, resourceScope);
+        for (int i = 0; i < array.length; i++) {
+            MemoryAccess.setIntAtIndex(memorySegment, i, array[i]);
         }
         return memorySegment;
     }
-    public static MemorySegment createFromByteArray(final byte... array) {
-        return MemorySegmentUtil.createFromByteArray(ResourceScope.globalScope(),array);
+
+    public static MemorySegment createFromByteArray(byte... array) {
+        return createFromByteArray(ResourceScope.globalScope(), array);
     }
-    public static MemorySegment createFromByteArray(final ResourceScope resourceScope, final byte... array) {
-        final MemorySegment memorySegment = MemorySegment.allocateNative(
-                MemoryLayouts.JAVA_BYTE.byteSize()*array.length, resourceScope);
-        for(int i = 0; i<array.length; i++) {
-            MemoryAccess.setByteAtOffset(memorySegment,i, array[i]);
+
+    public static MemorySegment createFromByteArray(ResourceScope resourceScope, byte... array) {
+        MemorySegment memorySegment = MemorySegment.allocateNative(
+                MemoryLayouts.JAVA_BYTE.byteSize() * array.length, resourceScope);
+        for (int i = 0; i < array.length; i++) {
+            MemoryAccess.setByteAtOffset(memorySegment, i, array[i]);
         }
         return memorySegment;
     }

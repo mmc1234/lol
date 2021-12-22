@@ -23,7 +23,7 @@ import com.google.inject.*;
 public class ImplGLFWModule extends AbstractModule {
     @Override
     protected void configure() {
-        install(new GLFWModule());
-        bind(GlfwBackend.class).to(ImplGLFWBackend.class);
+        this.install(new GLFWModule());
+        this.bind(GlfwBackend.class).to(ImplGLFWBackend.class);
     }
 }

@@ -18,19 +18,19 @@ package com.github.mmc1234.lol.base;
 
 public record Float4(float x, float y, float z, float w) {
     public float red() {
-        return x;
+        return this.x;
     }
 
     public float green() {
-        return y;
+        return this.y;
     }
 
     public float blue() {
-        return z;
+        return this.z;
     }
 
     public float alpha() {
-        return w;
+        return this.w;
     }
 
 

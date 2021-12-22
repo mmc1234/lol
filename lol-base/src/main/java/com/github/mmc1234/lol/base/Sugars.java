@@ -22,70 +22,70 @@ import java.util.function.Function;
 public class Sugars {
 
     public interface SafeCall<R, E extends Throwable> {
-        public R get() throws E;
+        R get() throws E;
     }
 
     public interface SafeRunnable<E extends Throwable> {
-        public void run() throws E;
+        void run() throws E;
     }
 
     @SuppressWarnings("unchecked")
-    public static <R, E extends Throwable> R noCatch(SafeCall<R, E> func,
-                                                     Function<E, R> catchCallback) {
+    public static <R, E extends Throwable> R noCatch(final SafeCall<R, E> func,
+                                                     final Function<E, R> catchCallback) {
         try {
             return func.get();
-        } catch (Throwable throwable) {
+        } catch (final Throwable throwable) {
             return catchCallback.apply((E) throwable);
         }
     }
 
 
-    public static <R, E extends Throwable> R noCatch(SafeCall<R, E> func) {
+    public static <R, E extends Throwable> R noCatch(final SafeCall<R, E> func) {
         try {
             return func.get();
-        } catch (Throwable throwable) {
+        } catch (final Throwable throwable) {
             throwable.printStackTrace();
         }
         return null;
     }
 
     @SuppressWarnings("unchecked")
-    public static <E extends Throwable> void noCatchConsumer(SafeRunnable<E> func,
-                                                             Consumer<E> catchCallback) {
+    public static <E extends Throwable> void noCatchConsumer(final SafeRunnable<E> func,
+                                                             final Consumer<E> catchCallback) {
         try {
             func.run();
-        } catch (Throwable throwable) {
+        } catch (final Throwable throwable) {
             catchCallback.accept((E) throwable);
         }
     }
 
-    public static <E extends Throwable> void noCatchRunnable(SafeRunnable<E> func) {
+    public static <E extends Throwable> void noCatchRunnable(final SafeRunnable<E> func) {
         try {
             func.run();
-        } catch (Throwable throwable) {
+        } catch (final Throwable throwable) {
             throwable.printStackTrace();
         }
     }
 
-    public static void notNull(Object obj, Runnable exec) {
+    public static void notNull(final Object obj, final Runnable exec) {
         if (obj != null) {
             exec.run();
         }
     }
 
-    public static <T> void notNull(T obj, Consumer<T> exec) {
+    public static <T> void notNull(final T obj, final Consumer<T> exec) {
         if (obj != null) {
             exec.accept(obj);
         }
     }
 
-    public static <T> void only(T obj, Consumer<T> exec, Function<T, Boolean> exp) {
+    public static <T> void only(final T obj, final Consumer<T> exec, final Function<T, Boolean> exp) {
         if (exp.apply(obj)) {
             exec.accept(obj);
         }
     }
 
-    public static <T> void not(T obj, Consumer<T> exec, Function<T, Boolean> exp) {
+    public static <T> void not(final T obj, final Consumer<T> exec, final Function<T, Boolean> exp) {
         if (!exp.apply(obj)) {
             exec.accept(obj);
         }

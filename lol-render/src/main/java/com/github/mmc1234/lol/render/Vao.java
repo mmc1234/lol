@@ -22,28 +22,28 @@ public class Vao {
     private int id;
 
     public void init() {
-        if(this.id == 0 && Render.isRenderThread()) {
-            this.id = GL30.glGenVertexArrays();
+        if (id == 0 && Render.isRenderThread()) {
+            id = GL30.glGenVertexArrays();
         }
     }
 
     public void initAndBind() {
-        if(this.id == 0 && Render.isRenderThread()) {
-            this.id = GL30.glGenVertexArrays();
-            GL30.glBindVertexArray(this.id);
+        if (id == 0 && Render.isRenderThread()) {
+            id = GL30.glGenVertexArrays();
+            GL30.glBindVertexArray(id);
         }
     }
 
     public void close() {
-        if(this.id != 0 && Render.isRenderThread()) {
-            GL30.glDeleteVertexArrays(this.id);
-            this.id = 0;
+        if (id != 0 && Render.isRenderThread()) {
+            GL30.glDeleteVertexArrays(id);
+            id = 0;
         }
     }
 
     public void bind() {
-        if (this.id != 0 && Render.isRenderThread()) {
-            GL30.glBindVertexArray(this.id);
+        if (id != 0 && Render.isRenderThread()) {
+            GL30.glBindVertexArray(id);
         }
     }
 
@@ -54,6 +54,6 @@ public class Vao {
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 }

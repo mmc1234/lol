@@ -20,25 +20,26 @@ import com.google.common.base.Preconditions;
 
 public interface Timer {
     void tryRun();
+
     boolean shouldRun();
 
-    static Timer newSystem(Runnable task, long time, boolean resetOnRun) {
+    static Timer newSystem(final Runnable task, final long time, final boolean resetOnRun) {
         return new SystemTimer(task, time, resetOnRun);
     }
 
-    static Timer newSystem(Runnable task, long time) {
+    static Timer newSystem(final Runnable task, final long time) {
         return new SystemTimer(task, time, false);
     }
 
     class SystemTimer implements Timer {
-        private long timeInterval;
+        private final long timeInterval;
         private long time;
-        private boolean resetOnRun;
-        private Runnable task;
+        private final boolean resetOnRun;
+        private final Runnable task;
 
-        public SystemTimer(Runnable task, long time, boolean resetOnRun) {
+        public SystemTimer(final Runnable task, final long time, final boolean resetOnRun) {
             this.time = System.currentTimeMillis();
-            this.timeInterval = time;
+            timeInterval = time;
             this.task = task;
             this.resetOnRun = resetOnRun;
             Preconditions.checkNotNull(task);
@@ -46,19 +47,19 @@ public interface Timer {
 
         @Override
         public boolean shouldRun() {
-            return (System.currentTimeMillis() - time) >= timeInterval;
+            return (System.currentTimeMillis() - this.time) >= this.timeInterval;
         }
 
         @Override
         public void tryRun() {
-            var delta = System.currentTimeMillis() - time;
-            if (delta >= timeInterval) {
-                if (resetOnRun) {
-                    time += delta;
+            final var delta = System.currentTimeMillis() - this.time;
+            if (delta >= this.timeInterval) {
+                if (this.resetOnRun) {
+                    this.time += delta;
                 } else {
-                    time += timeInterval;
+                    this.time += this.timeInterval;
                 }
-                task.run();
+                this.task.run();
             }
         }
     }

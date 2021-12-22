@@ -21,6 +21,6 @@ import com.google.inject.*;
 public class GLFWModule extends AbstractModule {
     @Override
     protected void configure() {
-        requestStaticInjection(GLFW.class);
+        this.requestStaticInjection(GLFW.class);
     }
 }

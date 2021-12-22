@@ -28,45 +28,45 @@ public final class RenderThread extends Thread {
     protected final AtomicBoolean stopFlag = new AtomicBoolean();
     protected final AtomicBoolean successStop = new AtomicBoolean();
 
-    private RenderThread(final String name) {
-        this.setName(name);
-        this.setDaemon(true);
+    private RenderThread(String name) {
+        setName(name);
+        setDaemon(true);
     }
 
     public static boolean isDead() {
-        return !RenderThread.INSTANCE.isAlive();
+        return !INSTANCE.isAlive();
     }
 
     public static boolean isExceptionClose() {
-        return RenderThread.isDead() && RenderThread.INSTANCE.successStop.get();
+        return isDead() && INSTANCE.successStop.get();
     }
 
     public static boolean isThreadAlive() {
-        return RenderThread.INSTANCE != null && RenderThread.INSTANCE.isAlive();
+        return INSTANCE != null && INSTANCE.isAlive();
     }
 
     public static synchronized void launch() {
-        if (RenderThread.INSTANCE == null) {
-            RenderThread.INSTANCE = new RenderThread("render thread");
+        if (INSTANCE == null) {
+            INSTANCE = new RenderThread("render thread");
             if (Platform.MACOSX.equals(Platform.get())) {
-                RenderThread.INSTANCE.run();
+                INSTANCE.run();
             } else {
-                RenderThread.INSTANCE.start();
+                INSTANCE.start();
             }
         }
     }
 
     public static boolean notShouldStop() {
-        return !RenderThread.INSTANCE.stopFlag.get();
+        return !INSTANCE.stopFlag.get();
     }
 
 
     public static boolean shouldStop() {
-        return RenderThread.INSTANCE.stopFlag.get();
+        return INSTANCE.stopFlag.get();
     }
 
     public static void makeShouldStop() {
-        RenderThread.INSTANCE.stopFlag.set(true);
+        INSTANCE.stopFlag.set(true);
     }
 
     @Override
@@ -77,7 +77,8 @@ public final class RenderThread extends Thread {
         Preconditions.checkState(Render.isRenderThread());
 
         // Loop
-        loop:while (RenderThread.notShouldStop()) {
+        loop:
+        while (notShouldStop()) {
             glfwPollEvents();
 
             Render.replayQueue();
@@ -86,7 +87,7 @@ public final class RenderThread extends Thread {
 
         // Terminate
         glfwTerminate();
-        this.successStop.set(true);
+        successStop.set(true);
         // System.out.println("Stop render");
     }
 }

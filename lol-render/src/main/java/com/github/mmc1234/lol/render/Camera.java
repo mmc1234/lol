@@ -36,102 +36,103 @@ public class Camera {
 
     private int clearMask;
 
-    private Float4 background = new Float4(0.25f, 0.25f, 0.25f,1);
+    private Float4 background = new Float4(0.25f, 0.25f, 0.25f, 1);
 
     float fov, aspect, zNear, zFar;
 
     public int getClearMask() {
-        return this.clearMask;
+        return clearMask;
     }
 
-    public void setClearMask(final int clearMask) {
+    public void setClearMask(int clearMask) {
         this.clearMask = clearMask;
     }
 
     public Float4 getBackground() {
-        return this.background;
+        return background;
     }
 
-    public void setBackground(final Float4 background) {
+    public void setBackground(Float4 background) {
         this.background = background;
     }
 
-    public void setFrameBuffer(final FrameBuffer frameBuffer) {
+    public void setFrameBuffer(FrameBuffer frameBuffer) {
         this.frameBuffer = FrameBuffer.notNull(frameBuffer);
     }
 
     public FrameBuffer getFrameBuffer() {
-        return this.frameBuffer;
+        return frameBuffer;
     }
 
     public Matrix4f getProjectionMatrix() {
-        return this.projectionMatrix;
+        return projectionMatrix;
     }
 
     public Matrix4f getModelMatrix() {
-        return this.modelMatrix;
+        return modelMatrix;
     }
 
     public Matrix4f getViewMatrix() {
-        return this.viewMatrix;
+        return viewMatrix;
     }
 
     public Matrix4f getModelViewMatrix() {
-        return this.modelViewMatrix;
+        return modelViewMatrix;
     }
 
-    public void setFov(final float fov) {
+    public void setFov(float fov) {
         this.fov = fov;
     }
 
-    public void setAspect(final float aspect) {
+    public void setAspect(float aspect) {
         this.aspect = aspect;
     }
 
-    public void setZFar(final float zFar) {
+    public void setZFar(float zFar) {
         this.zFar = zFar;
     }
 
-    public void setZNear(final float zNear) {
+    public void setZNear(float zNear) {
         this.zNear = zNear;
     }
 
     public float getFov() {
-        return this.fov;
+        return fov;
     }
 
     public float getAspect() {
-        return this.aspect;
+        return aspect;
     }
 
     public float getZNear() {
-        return this.zNear;
+        return zNear;
     }
 
     public float getZFar() {
-        return this.zFar;
+        return zFar;
     }
 
     public void updateProjection() {
-        this.projectionMatrix.identity().setPerspective(this.fov, this.aspect, this.zNear, this.zFar);
-    }
-    public void updateViewMatrix() {
-        this.viewMatrix.identity();
-        // First do the rotation so camera rotates over its position
-        this.viewMatrix.rotate((float) Math.toRadians(this.transform.rotation.x), new Vector3f(1, 0, 0))
-                .rotate((float)Math.toRadians(this.transform.rotation.y), new Vector3f(0, 1, 0));
-        // Then do the translation
-        this.viewMatrix.translate(-this.transform.position.x, -this.transform.position.y, -this.transform.position.z);
+        projectionMatrix.identity().setPerspective(fov, aspect, zNear, zFar);
     }
 
-    public void buildModelViewMatrix(final Transform transformIn, final Matrix4f viewMatrix) {
-        this.modelMatrix.identity().translate(transformIn.getPosition()).
-                rotateX((float)Math.toRadians(-transformIn.rotation.x)).
-                rotateY((float)Math.toRadians(-transformIn.rotation.y)).
-                rotateZ((float)Math.toRadians(-transformIn.rotation.z)).
+    public void updateViewMatrix() {
+        viewMatrix.identity();
+        // First do the rotation so camera rotates over its position
+        viewMatrix.rotate((float) Math.toRadians(transform.rotation.x), new Vector3f(1, 0, 0))
+                .rotate((float) Math.toRadians(transform.rotation.y), new Vector3f(0, 1, 0));
+        // Then do the translation
+        viewMatrix.translate(-transform.position.x, -transform.position.y, -transform.position.z);
+    }
+
+    public void buildModelViewMatrix(Transform transformIn, Matrix4f viewMatrix) {
+        modelMatrix.identity().translate(transformIn.getPosition()).
+                rotateX((float) Math.toRadians(-transformIn.rotation.x)).
+                rotateY((float) Math.toRadians(-transformIn.rotation.y)).
+                rotateZ((float) Math.toRadians(-transformIn.rotation.z)).
                 scale(transformIn.getScale());
-        this.modelViewMatrix.set(viewMatrix);
-        this.modelViewMatrix.mul(this.modelMatrix);
+        modelViewMatrix.set(viewMatrix);
+        modelViewMatrix.mul(modelMatrix);
     }
 
 }

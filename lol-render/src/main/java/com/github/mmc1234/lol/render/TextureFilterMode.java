@@ -20,14 +20,14 @@ import org.lwjgl.opengl.*;
 
 public enum TextureFilterMode {
     POINT, LINEAR,
-    NEAREST_MIPMAP_POINT,NEAREST_MIPMAP_LINEAR,
+    NEAREST_MIPMAP_POINT, NEAREST_MIPMAP_LINEAR,
     LINEAR_MIPMAP_POINT, LINEAR_MIPMAP_LINEAR;
 
     public int toInt() {
-        return TextureFilterMode.toInt(this);
+        return toInt(this);
     }
 
-    public static int toInt(final TextureFilterMode filterMode) {
+    public static int toInt(TextureFilterMode filterMode) {
         return switch (filterMode) {
             case POINT -> GL11.GL_NEAREST;
             case LINEAR -> GL11.GL_LINEAR;

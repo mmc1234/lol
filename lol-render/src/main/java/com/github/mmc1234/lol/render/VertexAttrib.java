@@ -28,9 +28,9 @@ public record VertexAttrib(TypeFormat format, int size) {
         Preconditions.checkArgument(size >= 0);
     }
 
-    public static List<VertexAttrib> list(final VertexAttrib... descriptions) {
-        final List<VertexAttrib> list = Lists.newArrayList();
-        for (final var desc : descriptions) {
+    public static List<VertexAttrib> list(VertexAttrib... descriptions) {
+        List<VertexAttrib> list = Lists.newArrayList();
+        for (var desc : descriptions) {
             if (desc != null) {
                 list.add(desc);
             }
@@ -38,51 +38,51 @@ public record VertexAttrib(TypeFormat format, int size) {
         return List.copyOf(list);
     }
 
-    public static List<VertexAttrib> list(final TypeFormat f1, final int s1) {
-        return VertexAttrib.list(of(f1, s1));
+    public static List<VertexAttrib> list(TypeFormat f1, int s1) {
+        return list(VertexAttrib.of(f1, s1));
     }
 
-    public static List<VertexAttrib> list(final TypeFormat f1, final int s1,
-                                          final TypeFormat f2, final int s2) {
-        return VertexAttrib.list(
-                of(f1, s1),
-                of(f2, s2));
+    public static List<VertexAttrib> list(TypeFormat f1, int s1,
+                                          TypeFormat f2, int s2) {
+        return list(
+                VertexAttrib.of(f1, s1),
+                VertexAttrib.of(f2, s2));
     }
 
-    public static List<VertexAttrib> list(final TypeFormat f1, final int s1,
-                                          final TypeFormat f2, final int s2,
-                                          final TypeFormat f3, final int s3) {
-        return VertexAttrib.list(
-                of(f1, s1),
-                of(f2, s2),
-                of(f3, s3));
+    public static List<VertexAttrib> list(TypeFormat f1, int s1,
+                                          TypeFormat f2, int s2,
+                                          TypeFormat f3, int s3) {
+        return list(
+                VertexAttrib.of(f1, s1),
+                VertexAttrib.of(f2, s2),
+                VertexAttrib.of(f3, s3));
     }
 
-    public static List<VertexAttrib> list(final TypeFormat f1, final int s1,
-                                          final TypeFormat f2, final int s2,
-                                          final TypeFormat f3, final int s3,
-                                          final TypeFormat f4, final int s4) {
-        return VertexAttrib.list(
-                of(f1, s1),
-                of(f2, s2),
-                of(f3, s3),
-                of(f4, s4));
+    public static List<VertexAttrib> list(TypeFormat f1, int s1,
+                                          TypeFormat f2, int s2,
+                                          TypeFormat f3, int s3,
+                                          TypeFormat f4, int s4) {
+        return list(
+                VertexAttrib.of(f1, s1),
+                VertexAttrib.of(f2, s2),
+                VertexAttrib.of(f3, s3),
+                VertexAttrib.of(f4, s4));
     }
 
-    public static List<VertexAttrib> list(final TypeFormat f1, final int s1,
-                                          final TypeFormat f2, final int s2,
-                                          final TypeFormat f3, final int s3,
-                                          final TypeFormat f4, final int s4,
-                                          final TypeFormat f5, final int s5) {
-        return VertexAttrib.list(
-                of(f1, s1),
-                of(f2, s2),
-                of(f3, s3),
-                of(f4, s4),
-                of(f5, s5));
+    public static List<VertexAttrib> list(TypeFormat f1, int s1,
+                                          TypeFormat f2, int s2,
+                                          TypeFormat f3, int s3,
+                                          TypeFormat f4, int s4,
+                                          TypeFormat f5, int s5) {
+        return list(
+                VertexAttrib.of(f1, s1),
+                VertexAttrib.of(f2, s2),
+                VertexAttrib.of(f3, s3),
+                VertexAttrib.of(f4, s4),
+                VertexAttrib.of(f5, s5));
     }
 
-    public static VertexAttrib of(final TypeFormat format, final int size) {
+    public static VertexAttrib of(TypeFormat format, int size) {
         return new VertexAttrib(format, size);
     }
 }

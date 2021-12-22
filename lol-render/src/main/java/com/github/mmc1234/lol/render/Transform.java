@@ -28,60 +28,60 @@ public final class Transform {
     public final Vector3f scale;
 
     public Transform() {
-        this(new Vector3f(0, 0, 0), new Vector3f(0, 0, 0), new Vector3f(1,1,1));
+        this(new Vector3f(0, 0, 0), new Vector3f(0, 0, 0), new Vector3f(1, 1, 1));
     }
 
-    public Transform(final Vector3f position, final Vector3f rotation, final Vector3f scale) {
+    public Transform(Vector3f position, Vector3f rotation, Vector3f scale) {
         this.position = position;
         this.rotation = rotation;
         this.scale = scale;
     }
 
     public Vector3f getPosition() {
-        return this.position;
+        return position;
     }
 
-    public void setPosition(final float x, final float y, final float z) {
-        this.position.x = x;
-        this.position.y = y;
-        this.position.z = z;
+    public void setPosition(float x, float y, float z) {
+        position.x = x;
+        position.y = y;
+        position.z = z;
     }
 
-    public void movePosition(final float offsetX, final float offsetY, final float offsetZ) {
-        if ( offsetZ != 0 ) {
-            this.position.x += (float)Math.sin(Math.toRadians(this.rotation.y)) * -1.0f * offsetZ;
-            this.position.z += (float)Math.cos(Math.toRadians(this.rotation.y)) * offsetZ;
+    public void movePosition(float offsetX, float offsetY, float offsetZ) {
+        if (offsetZ != 0) {
+            position.x += (float) Math.sin(Math.toRadians(rotation.y)) * -1.0f * offsetZ;
+            position.z += (float) Math.cos(Math.toRadians(rotation.y)) * offsetZ;
         }
-        if ( offsetX != 0) {
-            this.position.x += (float)Math.sin(Math.toRadians(this.rotation.y - 90)) * -1.0f * offsetX;
-            this.position.z += (float)Math.cos(Math.toRadians(this.rotation.y - 90)) * offsetX;
+        if (offsetX != 0) {
+            position.x += (float) Math.sin(Math.toRadians(rotation.y - 90)) * -1.0f * offsetX;
+            position.z += (float) Math.cos(Math.toRadians(rotation.y - 90)) * offsetX;
         }
-        this.position.y += offsetY;
+        position.y += offsetY;
     }
 
     public Vector3f getRotation() {
-        return this.rotation;
+        return rotation;
     }
 
-    public void setRotation(final float x, final float y, final float z) {
-        this.rotation.x = x;
-        this.rotation.y = y;
-        this.rotation.z = z;
+    public void setRotation(float x, float y, float z) {
+        rotation.x = x;
+        rotation.y = y;
+        rotation.z = z;
     }
 
     public Vector3f getScale() {
-        return this.scale;
+        return scale;
     }
 
-    public void setScale(final float x, final float y, final float z) {
-        this.scale.x = x;
-        this.scale.y = y;
-        this.scale.z = z;
+    public void setScale(float x, float y, float z) {
+        scale.x = x;
+        scale.y = y;
+        scale.z = z;
     }
 
-    public void moveRotation(final float offsetX, final float offsetY, final float offsetZ) {
-        this.rotation.x += offsetX;
-        this.rotation.y += offsetY;
-        this.rotation.z += offsetZ;
+    public void moveRotation(float offsetX, float offsetY, float offsetZ) {
+        rotation.x += offsetX;
+        rotation.y += offsetY;
+        rotation.z += offsetZ;
     }
 }

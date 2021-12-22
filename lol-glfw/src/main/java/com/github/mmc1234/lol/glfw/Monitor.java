@@ -17,9 +17,10 @@
 package com.github.mmc1234.lol.glfw;
 
 public record Monitor(long address) {
-    public static final Monitor ofLong(long address) {
-        if(address == 0) return EMPTY;
+    public static final Monitor ofLong(final long address) {
+        if (address == 0) return Monitor.EMPTY;
         return new Monitor(address);
     }
+
     public static final Monitor EMPTY = new Monitor(0);
 }

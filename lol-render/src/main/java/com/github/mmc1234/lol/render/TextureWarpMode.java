@@ -22,12 +22,12 @@ public enum TextureWarpMode {
     REPEAT,
     /**
      * clamp to border
-     * */
+     */
     CLAMP,
     MIRROR,
     /**
      * clamp to edge
-     * */
+     */
     MIRROR_ONCE;
 
     public int toInt() {
