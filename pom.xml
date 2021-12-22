@@ -12,7 +12,7 @@
         <module>lol-glfw</module>
         <module>lol-glfw-impl</module>
         <module>lol-cmd</module>
-        <module>lol-render-branch-v1</module>
+        <module>lol-render</module>
     </modules>
     <packaging>pom</packaging>
 

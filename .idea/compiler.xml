@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="lol-render-branch-v1" />
+        <module name="lol-render" />
         <module name="lol-glfw-impl" />
         <module name="lol-glfw" />
         <module name="lol-base" />
@@ -55,7 +55,6 @@
       <module name="lol-platform" target="17" />
       <module name="lol-platform-api" target="17" />
       <module name="lol-platform-impl" target="17" />
-      <module name="lol-render" target="17" />
       <module name="lol-render-core" target="17" />
       <module name="lol-rmgui" target="17" />
       <module name="lol-sdl2" target="17" />

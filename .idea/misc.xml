@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/lol-glfw/pom.xml" />
         <option value="$PROJECT_DIR$/lol-glfw-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-render/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -44,7 +45,6 @@
         <option value="$PROJECT_DIR$/lol-platform-impl/pom.xml" />
         <option value="$PROJECT_DIR$/lol-platform/pom.xml" />
         <option value="$PROJECT_DIR$/lol-render-core/pom.xml" />
-        <option value="$PROJECT_DIR$/lol-render/pom.xml" />
         <option value="$PROJECT_DIR$/lol-resource-face/pom.xml" />
         <option value="$PROJECT_DIR$/lol-rmgui/pom.xml" />
         <option value="$PROJECT_DIR$/lol-sdl2/pom.xml" />
