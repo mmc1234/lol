@@ -11,8 +11,8 @@
         <module>lol-base</module>
         <module>lol-glfw</module>
         <module>lol-glfw-impl</module>
-        <module>lol-render</module>
         <module>lol-cmd</module>
+        <module>lol-render</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -16,6 +16,8 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/lol-app-v1/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-demo/pom.xml" />
         <option value="$PROJECT_DIR$/lol-draw-3d/pom.xml" />
         <option value="$PROJECT_DIR$/lol-draw-core/pom.xml" />
         <option value="$PROJECT_DIR$/lol-draw-factory/pom.xml" />
@@ -37,6 +39,8 @@
         <option value="$PROJECT_DIR$/lol-lwjgl-backends/pom.xml" />
         <option value="$PROJECT_DIR$/lol-my-game/pom.xml" />
         <option value="$PROJECT_DIR$/lol-native-library/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-p1/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-p3/pom.xml" />
         <option value="$PROJECT_DIR$/lol-platform-api/pom.xml" />
         <option value="$PROJECT_DIR$/lol-platform-impl/pom.xml" />
         <option value="$PROJECT_DIR$/lol-platform/pom.xml" />
@@ -47,6 +51,7 @@
         <option value="$PROJECT_DIR$/lol-sound-api/pom.xml" />
         <option value="$PROJECT_DIR$/lol-sound-impl/pom.xml" />
         <option value="$PROJECT_DIR$/lol-tcc/pom.xml" />
+        <option value="$PROJECT_DIR$/lol-test/pom.xml" />
         <option value="$PROJECT_DIR$/lol-text-draw/pom.xml" />
         <option value="$PROJECT_DIR$/lol-texture/pom.xml" />
         <option value="$PROJECT_DIR$/lol-theme-api/pom.xml" />
